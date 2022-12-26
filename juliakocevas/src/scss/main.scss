@@ -1,0 +1,6 @@
+//1. Bootstrap overrided variables $body-bg: black;
+
+//2. Import our bootstrap! @import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+//3. Import our own scss (could be several files) @import './sticky-footer'; @import './body';
+@import './sticky-footer.scss';
