@@ -1,3 +1,4 @@
+// THEORY:
 /*Om vi override bootstrap variables:
 
 1. //Bootstrap variable overrides (måste komma innan import bootstrap!):
@@ -11,7 +12,12 @@ $body-color: white; (tex)
 @import "./sticky-footer";
 @import "./body";
 */
-// Bootstrap css
+
+// IMPLEMENTATION:
+// 1. Override bootstrap variables
+
+// 2.  Bootstrap css
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
-// Our own css
+//3. Our own css
+@import './sticky-footer.scss';
