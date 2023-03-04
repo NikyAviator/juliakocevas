@@ -5,6 +5,7 @@ const Footer = () => {
     <div className='footer'>
       <div className='footer-container'>
         <p className='footer-text'>&copy; 2023 Julia Kocevas</p>
+        <p>Adda FB, Insta, Tiktok </p>
       </div>
     </div>
   );
