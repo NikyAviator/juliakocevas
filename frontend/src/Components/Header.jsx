@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => {
-  return <div>Header PPC - test, dibble</div>;
+  return <div>Header TEST</div>;
 };
 
 export default Header;
