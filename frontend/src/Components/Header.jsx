@@ -1,11 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Header() {
   return (
-    <Navbar bg='light' expand='lg'>
+    <Navbar bg='secondary' expand='lg'>
       <Container>
         <Navbar.Brand href='#home'>Julia Kocevas</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
