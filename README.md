@@ -118,3 +118,9 @@ flex: 1;
 ```
 
 3. import the file in our main.scss
+
+---
+
+# To run:
+
+1. cd into frontend/
