@@ -124,3 +124,7 @@ flex: 1;
 # To run:
 
 1. cd into frontend/
+2. type: npm run dev
+3. Control + click in the terminal to get to the website:
+
+- http://localhost:5173/
