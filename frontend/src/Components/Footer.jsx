@@ -10,7 +10,7 @@ The className='text-white mx-2' is used to make the icons white and add some hor
 
 const Footer = () => {
   return (
-    <footer className='bg-secondary text-white'>
+    <footer className='bg-dark text-white'>
       <div className='container py-1 d-flex justify-content-center'>
         <div>
           <a

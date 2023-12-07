@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
   return (
-    <Navbar bg='secondary' expand='lg'>
+    <Navbar bg='dark' expand='lg' variant='dark'>
       <Container>
         <Navbar.Brand href='#home'>Julia Kocevas</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -12,7 +12,6 @@ function Header() {
           <Nav className='me-auto'>
             <Nav.Link href='#home'>Home</Nav.Link>
             <Nav.Link href='#mywork'>My Work</Nav.Link>
-            <Nav.Link href='#mywork'>Contanct Me</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
