@@ -15,20 +15,35 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Row>
-          <Col xs={6}>
+        <Row className='my-3'>
+          <Col xs={3}>
             <CardJulia title={'Title ppc1'} image={componentsImg} />
           </Col>
-          <Col xs={6}>
+          <Col xs={3}>
             <CardJulia title={'Title ppc2'} image={propsImg} />
           </Col>
-          <Col xs={6}>
+          <Col xs={3}>
             <CardJulia title={'Title ppc3'} image={jsxImg} />
           </Col>
-          <Col xs={6}>
+          <Col xs={3}>
             <CardJulia title={'Title ppc4'} image={stateImg} />
           </Col>
         </Row>
+        <Row>
+          <Col xs={3}>
+            <CardJulia title={'Title ppc1'} image={componentsImg} />
+          </Col>
+          <Col xs={3}>
+            <CardJulia title={'Title ppc2'} image={propsImg} />
+          </Col>
+          <Col xs={3}>
+            <CardJulia title={'Title ppc3'} image={jsxImg} />
+          </Col>
+          <Col xs={3}>
+            <CardJulia title={'Title ppc4'} image={stateImg} />
+          </Col>
+        </Row>
+
         <p>Home CONTAINER TEST</p>
       </Container>
     </>

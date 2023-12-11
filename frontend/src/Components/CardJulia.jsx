@@ -7,7 +7,7 @@ import CardImage from '../public/jsx-ui.png';
 function CardJulia(props) {
   return (
     <>
-      <Card style={{ width: '15rem' }}>
+      <Card>
         <Card.Img variant='top' src={props.image} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
