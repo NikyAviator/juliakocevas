@@ -8,12 +8,12 @@ function CardJulia(props) {
   return (
     <>
       <Card style={{ width: '15rem' }}>
-        <Card.Img variant='top' src={CardImage} />
+        <Card.Img variant='top' src={props.image} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
             {props.description}
-            <p>CARD CONTAINER </p>
+            <p>Card Description</p>
           </Card.Text>
           <Button variant='primary'>Go somewhere</Button>
         </Card.Body>
