@@ -1,8 +1,7 @@
 import React from 'react';
+import '../scss/main.scss';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../scss/main.scss';
 import CardImage from '../public/jsx-ui.png';
 
 function CardJulia(props) {
@@ -14,7 +13,7 @@ function CardJulia(props) {
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
             {props.description}
-            <p>CARD CONTAINER</p>
+            <p>CARD CONTAINER </p>
           </Card.Text>
           <Button variant='primary'>Go somewhere</Button>
         </Card.Body>

@@ -13,7 +13,14 @@ const Home = () => {
         <Row>
           <Col>
             <CardJulia />
+          </Col>
+          <Col>
             <CardJulia />
+          </Col>
+          <Col>
+            <CardJulia />
+          </Col>
+          <Col>
             <CardJulia />
           </Col>
         </Row>
