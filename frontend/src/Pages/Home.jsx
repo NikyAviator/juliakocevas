@@ -5,26 +5,28 @@ import CardJulia from '../Components/CardJulia';
 import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ComponentImage from '../public/components.png';
-import ConfingImage from '../public/config.png';
-import JsxImage from '../public/jsx-ui.png';
-import StateImg from '../public/state-mgmt.png';
+
+import componentsImg from '../public/components.png';
+import propsImg from '../public/config.png';
+import jsxImg from '../public/jsx-ui.png';
+import stateImg from '../public/state-mgmt.png';
+
 const Home = () => {
   return (
     <>
       <Container>
         <Row>
-          <Col>
-            <CardJulia title={'Title ppc1'} image={ConfingImage} />
+          <Col xs={6}>
+            <CardJulia title={'Title ppc1'} image={componentsImg} />
           </Col>
-          <Col>
-            <CardJulia title={'Title ppc2'} image={JsxImage} />
+          <Col xs={6}>
+            <CardJulia title={'Title ppc2'} image={propsImg} />
           </Col>
-          <Col>
-            <CardJulia title={'Title ppc3'} image={StateImg} />
+          <Col xs={6}>
+            <CardJulia title={'Title ppc3'} image={jsxImg} />
           </Col>
-          <Col>
-            <CardJulia title={'Title ppc4'} image={ComponentImage} />
+          <Col xs={6}>
+            <CardJulia title={'Title ppc4'} image={stateImg} />
           </Col>
         </Row>
         <p>Home CONTAINER TEST</p>
