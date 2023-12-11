@@ -43,8 +43,6 @@ const Home = () => {
             <CardJulia title={'Title ppc4'} image={stateImg} />
           </Col>
         </Row>
-
-        <p>Home CONTAINER TEST</p>
       </Container>
     </>
   );
