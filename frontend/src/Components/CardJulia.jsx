@@ -2,7 +2,6 @@ import React from 'react';
 import '../scss/main.scss';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardImage from '../public/jsx-ui.png';
 
 function CardJulia(props) {
   return (
@@ -15,7 +14,7 @@ function CardJulia(props) {
             {props.description}
             <p>Card Description</p>
           </Card.Text>
-          <Button variant='primary'>Go somewhere</Button>
+          <Button variant='primary'>Go somewhere/ view content</Button>
         </Card.Body>
       </Card>
     </>
