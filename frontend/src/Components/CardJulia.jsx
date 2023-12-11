@@ -3,20 +3,23 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../scss/main.scss';
+import CardImage from '../public/jsx-ui.png';
 
-function CardJulia() {
+function CardJulia(props) {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant='top' src='../assets/jsx-ui.png' />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant='primary'>Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <>
+      <Card style={{ width: '15rem' }}>
+        <Card.Img variant='top' src={CardImage} />
+        <Card.Body>
+          <Card.Title>{props.title}</Card.Title>
+          <Card.Text>
+            {props.description}
+            <p>CARD CONTAINER</p>
+          </Card.Text>
+          <Button variant='primary'>Go somewhere</Button>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 
