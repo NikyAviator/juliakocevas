@@ -2,7 +2,6 @@ import React from 'react';
 import '../scss/main.scss';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
 function CardJulia(props) {
   return (
     <>

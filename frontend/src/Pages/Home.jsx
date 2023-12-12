@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Row className='my-3'>
+        <Row className='my-4'>
           <Col xs={3}>
             <CardJulia title={'Title ppc1'} image={componentsImg} />
           </Col>
@@ -44,6 +44,7 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      <Container></Container>
     </>
   );
 };
