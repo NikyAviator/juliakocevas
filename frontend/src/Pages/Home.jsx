@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Row className='row row-cols-2 row-cols-lg-4 my-4'>
+        <Row className='row row-cols-2 row-cols-lg-4 g-3 m-1'>
           <Col>
             <CardJulia
               title={CORE_CONCEPTS[0].title}
