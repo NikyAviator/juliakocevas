@@ -1,7 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from '../public/config.png';
 
-function UncontrolledExample() {
+function Ppc() {
   return (
     <Carousel>
       <Carousel.Item>
@@ -31,4 +30,4 @@ function UncontrolledExample() {
   );
 }
 
-export default UncontrolledExample;
+export default Ppc;

@@ -5,12 +5,13 @@ import CardJulia from '../Components/CardJulia';
 import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { Carousel } from 'bootstrap';
 
 import componentsImg from '../public/components.png';
 import propsImg from '../public/config.png';
 import jsxImg from '../public/jsx-ui.png';
 import stateImg from '../public/state-mgmt.png';
-
+import Ppc from '../Components/Ppc';
 const Home = () => {
   return (
     <>
@@ -44,7 +45,13 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-      <Container></Container>
+      <Container>
+        <Row>
+          <Col>
+            <p> Hello</p>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
