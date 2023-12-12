@@ -5,29 +5,44 @@ import CardJulia from '../Components/CardJulia';
 import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import { Carousel } from 'bootstrap';
 
 import componentsImg from '../public/components.png';
 import propsImg from '../public/config.png';
 import jsxImg from '../public/jsx-ui.png';
 import stateImg from '../public/state-mgmt.png';
-import datajs from '../data.js';
+import { CORE_CONCEPTS } from '../data.js';
 const Home = () => {
   return (
     <>
       <Container>
         <Row className='row row-cols-2 row-cols-lg-4 my-4'>
           <Col>
-            <CardJulia title={'Title ppc1'} image={componentsImg} description={datajs. } />
+            <CardJulia
+              title={CORE_CONCEPTS[0].title}
+              image={componentsImg}
+              description={CORE_CONCEPTS[0].description}
+            />
           </Col>
           <Col>
-            <CardJulia title={'Title ppc2'} image={propsImg} />
+            <CardJulia
+              title={CORE_CONCEPTS[1].title}
+              image={propsImg}
+              description={CORE_CONCEPTS[1].description}
+            />
           </Col>
           <Col>
-            <CardJulia title={'Title ppc3'} image={jsxImg} />
+            <CardJulia
+              title={CORE_CONCEPTS[2].title}
+              image={jsxImg}
+              description={CORE_CONCEPTS[2].description}
+            />
           </Col>
           <Col>
-            <CardJulia title={'Title ppc4'} image={stateImg} />
+            <CardJulia
+              title={CORE_CONCEPTS[3].title}
+              image={stateImg}
+              description={CORE_CONCEPTS[3].description}
+            />
           </Col>
         </Row>
       </Container>

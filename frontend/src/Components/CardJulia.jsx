@@ -10,10 +10,9 @@ function CardJulia(props) {
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
-            {props.description}
-            <p>Card Description</p>
+            <p>{props.description}</p>
           </Card.Text>
-          <Button variant='primary'>Go somewhere/ view content</Button>
+          <Button variant='warning'>Go somewhere/ view content</Button>
         </Card.Body>
       </Card>
     </>
