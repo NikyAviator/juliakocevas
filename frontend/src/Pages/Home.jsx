@@ -11,36 +11,22 @@ import componentsImg from '../public/components.png';
 import propsImg from '../public/config.png';
 import jsxImg from '../public/jsx-ui.png';
 import stateImg from '../public/state-mgmt.png';
-import Ppc from '../Components/Ppc';
+import datajs from '../data.js';
 const Home = () => {
   return (
     <>
       <Container>
-        <Row className='my-4'>
-          <Col xs={3}>
-            <CardJulia title={'Title ppc1'} image={componentsImg} />
+        <Row className='row row-cols-2 row-cols-lg-4 my-4'>
+          <Col>
+            <CardJulia title={'Title ppc1'} image={componentsImg} description={datajs. } />
           </Col>
-          <Col xs={3}>
+          <Col>
             <CardJulia title={'Title ppc2'} image={propsImg} />
           </Col>
-          <Col xs={3}>
+          <Col>
             <CardJulia title={'Title ppc3'} image={jsxImg} />
           </Col>
-          <Col xs={3}>
-            <CardJulia title={'Title ppc4'} image={stateImg} />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={3}>
-            <CardJulia title={'Title ppc1'} image={componentsImg} />
-          </Col>
-          <Col xs={3}>
-            <CardJulia title={'Title ppc2'} image={propsImg} />
-          </Col>
-          <Col xs={3}>
-            <CardJulia title={'Title ppc3'} image={jsxImg} />
-          </Col>
-          <Col xs={3}>
+          <Col>
             <CardJulia title={'Title ppc4'} image={stateImg} />
           </Col>
         </Row>
