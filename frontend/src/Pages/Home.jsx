@@ -6,10 +6,6 @@ import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import componentsImg from '../public/components.png';
-import propsImg from '../public/config.png';
-import jsxImg from '../public/jsx-ui.png';
-import stateImg from '../public/state-mgmt.png';
 import { CORE_CONCEPTS } from '../data.js';
 const Home = () => {
   return (
@@ -19,28 +15,28 @@ const Home = () => {
           <Col>
             <CardJulia
               title={CORE_CONCEPTS[0].title}
-              image={componentsImg}
+              image={CORE_CONCEPTS[0].image}
               description={CORE_CONCEPTS[0].description}
             />
           </Col>
           <Col>
             <CardJulia
               title={CORE_CONCEPTS[1].title}
-              image={propsImg}
+              image={CORE_CONCEPTS[1].image}
               description={CORE_CONCEPTS[1].description}
             />
           </Col>
           <Col>
             <CardJulia
               title={CORE_CONCEPTS[2].title}
-              image={jsxImg}
+              image={CORE_CONCEPTS[2].image}
               description={CORE_CONCEPTS[2].description}
             />
           </Col>
           <Col>
             <CardJulia
               title={CORE_CONCEPTS[3].title}
-              image={stateImg}
+              image={CORE_CONCEPTS[3].image}
               description={CORE_CONCEPTS[3].description}
             />
           </Col>
@@ -49,7 +45,7 @@ const Home = () => {
       <Container>
         <Row>
           <Col>
-            <p> Hello</p>
+            <p> CAROUSEL HÄR:</p>
           </Col>
         </Row>
       </Container>
