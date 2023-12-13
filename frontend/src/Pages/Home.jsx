@@ -7,11 +7,15 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import { CORE_CONCEPTS } from '../data.js';
+import BasicCarousel from '../Components/BasicCarousel.jsx';
 const Home = () => {
   return (
     <>
       <Container>
         <Row className='row row-cols-2 row-cols-lg-4 g-3 m-1'>
+          {/* {CORE_CONCEPTS.map((conceptItem) => {
+            return <CardJulia key={conceptItem.title} {...conceptItem} />;
+          })} */}
           <Col>
             <CardJulia
               title={CORE_CONCEPTS[0].title}
@@ -20,32 +24,20 @@ const Home = () => {
             />
           </Col>
           <Col>
-            <CardJulia
-              title={CORE_CONCEPTS[1].title}
-              image={CORE_CONCEPTS[1].image}
-              description={CORE_CONCEPTS[1].description}
-            />
+            <CardJulia {...CORE_CONCEPTS[1]} />
           </Col>
           <Col>
-            <CardJulia
-              title={CORE_CONCEPTS[2].title}
-              image={CORE_CONCEPTS[2].image}
-              description={CORE_CONCEPTS[2].description}
-            />
+            <CardJulia {...CORE_CONCEPTS[2]} />
           </Col>
           <Col>
-            <CardJulia
-              title={CORE_CONCEPTS[3].title}
-              image={CORE_CONCEPTS[3].image}
-              description={CORE_CONCEPTS[3].description}
-            />
+            <CardJulia {...CORE_CONCEPTS[3]} />
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container fluid>
         <Row>
           <Col>
-            <p> CAROUSEL HÄR:</p>
+            <BasicCarousel />
           </Col>
         </Row>
       </Container>
