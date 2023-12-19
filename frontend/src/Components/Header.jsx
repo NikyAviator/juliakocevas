@@ -9,7 +9,7 @@ function Header() {
         <Navbar.Brand href='/'>Julia Kocevas</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='me-auto'>
+          <Nav className='ms-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/aboutme'>About me</Nav.Link>
           </Nav>

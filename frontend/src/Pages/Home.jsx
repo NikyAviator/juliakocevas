@@ -14,7 +14,7 @@ const Home = () => {
       <Container>
         <Row>
           <Col>
-            <Topside />
+            <Topside2 />
           </Col>
         </Row>
       </Container>
