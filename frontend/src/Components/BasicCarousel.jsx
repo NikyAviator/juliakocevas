@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import { happydog } from '../images/happy-dog.jpg';
 
 function BasicCarousel() {
   return (
