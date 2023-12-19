@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 
 import BasicCarousel from '../Components/BasicCarousel.jsx';
 import Topside from '../Components/Topside.jsx';
+import Topside2 from '../Components/Topside2.jsx';
 const Home = () => {
   return (
     <>
