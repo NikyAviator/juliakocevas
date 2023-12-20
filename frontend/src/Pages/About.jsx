@@ -6,10 +6,13 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import '../scss/main.scss';
 import happyDog from '../public/happy-dog.png';
+
 const About = () => {
   return (
     <Container>
-      <Row>
+      <Row className='my-4'>
+        {' '}
+        {/* Add some margin if needed */}
         <Col md={6} className='d-flex align-items-center'>
           <div>
             <h2>About Julia</h2>
