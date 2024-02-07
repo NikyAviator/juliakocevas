@@ -12,14 +12,14 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Row>
+        <Row className='my-3'>
           <Col>
             <Topside2 />
           </Col>
         </Row>
       </Container>
-      <Container fluid>
-        <Row>
+      <Container>
+        <Row className='my-4'>
           <Col>
             <BasicCarousel />
           </Col>
