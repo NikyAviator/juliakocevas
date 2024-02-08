@@ -10,13 +10,13 @@ import happyDog from '../public/happy-dog.png';
 const About = () => {
   return (
     <Container>
-      <Row className='my-4'>
+      <Row className='my-2'>
         {' '}
         {/* Add some margin if needed */}
         <Col md={6} className='d-flex align-items-center'>
           <div>
-            <h2>About Julia</h2>
-            <p>Here's a paragraph about Julia...</p>
+            <h2 className='text-dark'>About Julia</h2>
+            <p className='text-dark'>Here's a paragraph about Julia...</p>
             {/* Add more content as needed */}
           </div>
         </Col>
