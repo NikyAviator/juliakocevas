@@ -5,6 +5,7 @@ import CardJulia from '../Components/CardJulia';
 import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import InstagramCard from './IntragramCard.jsx';
 import { CORE_CONCEPTS } from '../data.js';
 
 const Topside2 = (props) => {
@@ -16,6 +17,11 @@ const Topside2 = (props) => {
             <CardJulia {...conceptItem} />
           </Col>
         ))}
+      </Row>
+      <Row>
+        <Col>
+          <InstagramCard />
+        </Col>
       </Row>
     </Container>
   );
