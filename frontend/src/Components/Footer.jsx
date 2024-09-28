@@ -1,5 +1,5 @@
 import '../scss/styles.scss';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaTiktok } from 'react-icons/fa';
 
 /* 
 added target='_blank' to open the link in a new tab, and rel='noopener noreferrer' for security reasons. 
@@ -13,23 +13,22 @@ const Footer = () => {
       <div className='container py-1 d-flex justify-content-center'>
         <div>
           <a
-            href='https://github.com/NikyAviator'
+            href='https://www.instagram.com/juliakocevas'
             target='_blank'
             rel='noopener noreferrer'
             className='text-white mx-2'
           >
-            <FaGithub size='1em' />
+            <FaInstagram size='2em' />
           </a>
           <a
-            href='https://www.linkedin.com/in/nikolai-kocev-33799167'
+            href='https://www.tiktok.com/juliakocevas'
             target='_blank'
             rel='noopener noreferrer'
             className='text-white mx-2'
           >
-            <FaLinkedin size='1em' />
+            <FaTiktok size='2em' />
           </a>
         </div>
-        <span className='mx-2'>V1.0.0 Last updated: 2024-09-21</span>
       </div>
     </footer>
   );
