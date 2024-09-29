@@ -1,7 +1,21 @@
-.navbar-brand {
-  font-family: 'Tangerine', cursive;
-  font-weight: 700; // Making it bold if needed
-  font-size: 2.5rem; // Adjust the size to make it larger
-  line-height: 1.2; // Optional: controls the line spacing
-  letter-spacing: 1px; // Optional: to space out letters a bit more
+.navbar {
+  background-color: #4b0082; // Replace with your custom color (e.g., Indigo)
+  color: #ffffff; // Text color, adjust as needed
+
+  .navbar-brand {
+    font-family: 'Tangerine', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ffcc00; // Custom color for Navbar Brand text
+  }
+
+  .nav-link {
+    color: #948181; // Custom color for Nav links (e.g., About Me link)
+
+    &:hover {
+      color: #ffcc00; // Change color when hovering over links
+    }
+  }
 }

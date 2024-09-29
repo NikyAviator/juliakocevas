@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 
 const Header = () => {
   return (
-    <Navbar bg='secondary' expand='lg' variant='dark'>
+    <Navbar expand='lg' variant='dark'>
       <Container>
         <Navbar.Brand href='/'>JuliaKocevas</Navbar.Brand>
         <Nav.Link href='/aboutme'>About Me</Nav.Link>
