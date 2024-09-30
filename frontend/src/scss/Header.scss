@@ -11,6 +11,13 @@
     color: #000000; // Custom color for Navbar Brand text
   }
 
+  .aboutme-link {
+    font-family: 'Poppins', sans-serif; // Use 'Poppins' from the imported Google Font
+    font-weight: 500; // Adjust weight (e.g., 500 as imported for bold style)
+    font-size: 1.2rem; // Optional: adjust size if you want the text to be larger or smaller
+    font-style: italic; // Optional: set to 'normal' or 'italic' as needed
+  }
+
   .nav-link {
     color: #000000; // Custom color for Nav links (e.g., About Me link)
 

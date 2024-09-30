@@ -8,7 +8,9 @@ const Header = () => {
     <Navbar expand='lg' variant='dark'>
       <Container>
         <Navbar.Brand href='/'>JuliaKocevas</Navbar.Brand>
-        <Nav.Link href='/aboutme'>About Me</Nav.Link>
+        <Nav.Link className='aboutme-link' href='/aboutme'>
+          About Me
+        </Nav.Link>
       </Container>
     </Navbar>
   );
