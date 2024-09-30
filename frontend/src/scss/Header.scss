@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #4b0082; // Replace with your custom color (e.g., Indigo)
+  background-color: #b7b7b7; // Replace with your custom color (e.g., Indigo)
   color: #ffffff; // Text color, adjust as needed
 
   .navbar-brand {
@@ -8,14 +8,14 @@
     font-size: 2.5rem;
     line-height: 1.2;
     letter-spacing: 1px;
-    color: #ffcc00; // Custom color for Navbar Brand text
+    color: #000000; // Custom color for Navbar Brand text
   }
 
   .nav-link {
-    color: #948181; // Custom color for Nav links (e.g., About Me link)
+    color: #000000; // Custom color for Nav links (e.g., About Me link)
 
     &:hover {
-      color: #ffcc00; // Change color when hovering over links
+      color: #987b07; // Change color when hovering over links
     }
   }
 }

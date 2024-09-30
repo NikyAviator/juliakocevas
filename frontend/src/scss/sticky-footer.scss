@@ -9,3 +9,12 @@
 #root footer {
   flex-shrink: 0; /* This tells the browser that the footer should not shrink if there is not enough space */
 }
+
+.custom-footer-bgcolor {
+  background-color: #b7b7b7; // Replace with your custom color
+  color: #ffffff; // Optional: set a contrasting text color if needed
+}
+
+.dark-icon {
+  color: #000000; // Replace with any dark color you'd like
+}
