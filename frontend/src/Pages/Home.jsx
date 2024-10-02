@@ -1,15 +1,14 @@
 import '../scss/styles.scss';
 import Container from 'react-bootstrap/Container';
+import ArtGallery from '../Components/ArtGallery';
 
 const Home = () => {
   return (
-    <div className='home'>
-      <Container>
-        <h1>BILD HOME PAGE</h1>
-        <h1>Juilia Kocevas</h1>
-        <p> Dorem impsum</p>
-      </Container>
-    </div>
+    <Container>
+      <h1>BILD HOME PAGE</h1>
+      <h2>TEXT TEXT TEXT</h2>
+      <ArtGallery />
+    </Container>
   );
 };
 
