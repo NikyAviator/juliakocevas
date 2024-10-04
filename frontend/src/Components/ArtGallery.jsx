@@ -18,8 +18,9 @@ const ArtGallery = () => {
       const response = await fetch(
         `https://picsum.photos/v2/list?page=${page}&limit=6`
       );
+      const data = await response.json();
 
-      const newArtworks = response.map((item) => ({
+      const newArtworks = data.map((item) => ({
         imageUrl: item.download_url,
         text: item.author,
       }));
