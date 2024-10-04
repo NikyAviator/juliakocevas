@@ -2,22 +2,35 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ImageAndTextCard from './ImageAndTextCard';
+import { useState, useEffect } from 'react';
 
 const ArtGallery = () => {
-  const artworks = [
-    {
-      imageUrl: 'https://example.com/art1.jpg',
-      text: 'Beautiful landscape artwork by Julia Kocevas.',
-    },
-    {
-      imageUrl: 'https://example.com/art2.jpg',
-      text: 'A creative abstract painting.',
-    },
-    {
-      imageUrl: 'https://example.com/art3.jpg',
-      text: 'A serene beach view.',
-    },
-  ];
+  const [artworks, setArtworks] = useState([]);
+  const [page, setPage] = useState(1);
+
+  // Fetch data from the API
+  useEffect(() => {
+    fetchArtworks(page);
+  }, [page]);
+
+  const fetchArtworks = async (page) => {
+    try {
+      const response = await fetch(
+        `https://picsum.photos/v2/list?page=${page}&limit=6`
+      );
+
+      const newArtworks = response.map((item) => ({
+        imageUrl: item.download_url,
+        text: item.author,
+      }));
+
+      setArtworks([...artworks, ...newArtworks]);
+
+      setPage(page + 1);
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+    }
+  };
 
   return (
     <Container>
