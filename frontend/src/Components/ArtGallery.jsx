@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ImageAndTextCard from './ImageAndTextCard';
 import { useState, useEffect } from 'react';
+// import InfiniteScroll from 'react-infinite-scroll-component';
 
 const ArtGallery = () => {
   const [artworks, setArtworks] = useState([]);
