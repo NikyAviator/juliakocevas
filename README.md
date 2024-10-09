@@ -94,3 +94,11 @@ touch sticky-footer.scss
   flex-shrink: 0; /* This tells the browser that the footer should not shrink if there is not enough space */
 }
 ```
+
+# How to run:
+
+pwd to root project folder and:
+
+```
+npm run start
+```
