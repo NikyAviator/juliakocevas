@@ -16,10 +16,10 @@ dist-ssr
 
 
 # Pictures and videos
-public/*.jpg
-public/*.png
-public/*.jpeg
-public/*.mp4
+public/media/*.jpg
+public/media/*.png
+public/media/*.jpeg
+public/media/*.mp4
 
 # Editor directories and files
 .vscode/*

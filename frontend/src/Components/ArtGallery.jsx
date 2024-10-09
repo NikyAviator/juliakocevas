@@ -1,17 +1,22 @@
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { useState, useEffect } from 'react';
-// import InfiniteScroll from 'react-infinite-scroll-component';
 const ArtGallery = () => {
   const [mediaFiles, setMediaFiles] = useState([]);
 
   useEffect(() => {
-    fetch('/api/media')
-      .then((res) => res.json())
+    fetch('http://localhost:3001/api/media') // Ensure correct backend URL
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
       .then((data) => {
-        setMediaFiles(data);
+        console.log('Fetched media files:', data); // Log the response to verify
+        setMediaFiles(data); // Set media files state
       })
       .catch((err) => console.error('Error fetching media files:', err));
   }, []);
@@ -27,11 +32,15 @@ const ArtGallery = () => {
             <Col key={index} md={4} className='mb-4'>
               <div className='media-item'>
                 {isImage && (
-                  <img src={`/${file}`} alt={file} className='img-fluid' />
+                  <img
+                    src={file}
+                    alt={`Artwork ${index}`}
+                    className='img-fluid'
+                  />
                 )}
                 {isVideo && (
                   <video width='100%' height='auto' controls>
-                    <source src={`/${file}`} type='video/mp4' />
+                    <source src={file} type='video/mp4' />
                     Your browser does not support the video tag.
                   </video>
                 )}
