@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import '../scss/styles.scss';
 
 const ArtGallery = () => {
   const [mediaFiles, setMediaFiles] = useState([]);
