@@ -33,8 +33,8 @@ function Aboutme() {
   }, []);
 
   return (
-    <Container>
-      <Row className=''>
+    <Container className='py-5'>
+      <Row>
         <Col md={6}>
           <Card>
             {error && <p>{error}</p>} {/* Display error if any */}

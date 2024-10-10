@@ -39,7 +39,7 @@ const ArtGallery = () => {
   };
 
   return (
-    <Container className='art-gallery'>
+    <Container className='art-gallery py-5'>
       <Row>
         {mediaFiles.map((file, index) => {
           const isImage = file.endsWith('.jpg') || file.endsWith('.png');
