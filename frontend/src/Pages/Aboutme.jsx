@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
@@ -35,29 +34,40 @@ function Aboutme() {
 
   return (
     <Container>
-      <Row className='justify-content-center'>
+      <Row className=''>
         <Col md={6}>
           <Card>
             {error && <p>{error}</p>} {/* Display error if any */}
             {imageUrl ? (
-              <Card.Img variant='top' src={imageUrl} alt='My Sister' />
+              <Card.Img variant='top' src={imageUrl} alt='Julia Koceva' />
             ) : (
               <Card.Img variant='top' src='placeholder.jpg' alt='Placeholder' />
             )}
-            <Card.Body>
-              <Card.Title>About Julia Kocevas</Card.Title>
-              <Card.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-                malesuada. Curabitur consequat quam id libero pharetra, at
-                consequat orci vulputate. Nulla facilisi. Quisque ac velit
-                magna.
-              </Card.Text>
-              <Button variant='primary' href='/gallery'>
-                See Gallery
-              </Button>
-            </Card.Body>
           </Card>
+        </Col>
+        <Col md={6}>
+          <Card.Body>
+            <Card.Title>About Julia Kocevas</Card.Title>
+            <Card.Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
+              malesuada. Curabitur consequat quam id libero pharetra, at
+              consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
+              malesuada. Curabitur consequat quam id libero pharetra, at
+              consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
+              malesuada. Curabitur consequat quam id libero pharetra, at
+              consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
+            </Card.Text>
+          </Card.Body>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12}>
+          <h1>ppc</h1>
         </Col>
       </Row>
     </Container>
