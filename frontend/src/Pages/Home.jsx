@@ -5,8 +5,8 @@ import ArtGallery from '../Components/ArtGallery';
 const Home = () => {
   return (
     <Container>
-      <h1>BILD HOME PAGE</h1>
-      <h2>TEXT TEXT TEXT</h2>
+      <h1>Welcome to my digital artgallery</h1>
+
       <ArtGallery />
     </Container>
   );
