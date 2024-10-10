@@ -7,10 +7,11 @@ import '../scss/styles.scss';
 
 function Aboutme() {
   const [imageUrl, setImageUrl] = useState(''); // State to store the fetched image URL
+  const [videoUrl, setVideoUrl] = useState(''); // State to store the fetched video URL
   const [error, setError] = useState(null); // State to store any error
 
   useEffect(() => {
-    // Fetch a random image from the backend (replace '/api/media' with your specific API if needed)
+    // Fetch images and videos from the backend
     fetch('http://localhost:3001/api/media') // Ensure the correct backend URL
       .then((res) => {
         if (!res.ok) {
@@ -19,17 +20,23 @@ function Aboutme() {
         return res.json();
       })
       .then((data) => {
-        // Assuming data is an array of media files, pick the first image
+        // Filter for images and videos from the media files
         const images = data.filter(
           (file) => file.endsWith('0010.jpg') || file.endsWith('.png')
         );
+        const videos = data.filter((file) => file.endsWith('.mp4'));
+
+        // Set the first image and video from the fetched data
         if (images.length > 0) {
-          setImageUrl(images[0]); // Set the first image from the fetched data
+          setImageUrl(images[0]);
+        }
+        if (videos.length > 0) {
+          setVideoUrl(videos[0]);
         }
       })
       .catch((err) => {
-        setError('Failed to load image');
-        console.error('Error fetching image:', err);
+        setError('Failed to load media');
+        console.error('Error fetching media:', err);
       });
   }, []);
 
@@ -70,10 +77,20 @@ function Aboutme() {
             </Card.Text>
           </Card.Body>
         </Col>
-      </Row>
-      <Row>
-        <Col md={12}>
-          <h1>ppc</h1>
+
+        <Col md={6}>
+          {videoUrl ? (
+            <Card>
+              <Card.Body>
+                <video width='100%' height='auto' controls>
+                  <source src={videoUrl} type='video/mp4' />
+                  Your browser does not support the video tag.
+                </video>
+              </Card.Body>
+            </Card>
+          ) : (
+            <p>Loading video...</p>
+          )}
         </Col>
       </Row>
     </Container>
