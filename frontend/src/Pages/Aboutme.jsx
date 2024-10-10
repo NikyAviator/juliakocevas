@@ -58,7 +58,7 @@ function Aboutme() {
             )}
           </Card>
         </Col>
-        <Col md={6}>
+        <Col md={3}>
           <Card.Body>
             <Card.Title>About Julia Kocevas</Card.Title>
             <Card.Text>
@@ -77,8 +77,9 @@ function Aboutme() {
             </Card.Text>
           </Card.Body>
         </Col>
-
-        <Col md={6}>
+      </Row>
+      <Row>
+        <Col md={3}>
           {videoUrl ? (
             <Card>
               <Card.Body>
