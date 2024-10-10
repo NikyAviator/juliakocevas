@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import '../scss/styles.scss';
 
 function Aboutme() {
   const [imageUrl, setImageUrl] = useState(''); // State to store the fetched image URL
@@ -39,7 +40,12 @@ function Aboutme() {
           <Card>
             {error && <p>{error}</p>} {/* Display error if any */}
             {imageUrl ? (
-              <Card.Img variant='top' src={imageUrl} alt='Julia Koceva' />
+              <Card.Img
+                className='aboutme-image'
+                variant='top'
+                src={imageUrl}
+                alt='Julia Koceva'
+              />
             ) : (
               <Card.Img variant='top' src='placeholder.jpg' alt='Placeholder' />
             )}
