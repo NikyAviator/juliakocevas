@@ -97,8 +97,16 @@ touch sticky-footer.scss
 
 # How to run:
 
-pwd to root project folder and:
+## cd to root project folder and:
+
+For local backend (serving of the files) and local frontend.
 
 ```
 npm run start
+```
+
+For GCP backend and local frontend:
+
+```
+npm run start:gcp
 ```

@@ -1,10 +1,12 @@
 {
   "name": "juliakocevas",
   "version": "1.0.0",
-  "scripts": {
+ "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node backend/serverlocal.js",
-    "client": "npm run dev --prefix frontend"   
+    "server": "node backend/serverlocal.js",  
+    "client": "npm run dev --prefix frontend",  
+    "start:gcp": "concurrently \"npm run gcp-server\" \"npm run client\"", 
+    "gcp-server": "node backend/servergcp.js"  
   },
   "devDependencies": {
     "concurrently": "^6.0.0"
