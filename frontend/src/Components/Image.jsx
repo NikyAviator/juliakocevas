@@ -18,7 +18,6 @@ const Image = (props) => {
             Your browser does not support the video tag.
           </video>
         )}
-        <p>{file}</p>
       </div>
     </Col>
   );
