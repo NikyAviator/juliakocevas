@@ -4,10 +4,11 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../scss/styles.scss';
+import AboutMeImage from '../Components/AboutMeImage';
 
 function Aboutme() {
   const [imageUrl, setImageUrl] = useState(''); // State to store the fetched image URL
-  const [videoUrl, setVideoUrl] = useState(''); // State to store the fetched video URL
+  // const [videoUrl, setVideoUrl] = useState(''); // State to store the fetched video URL
   const [error, setError] = useState(null); // State to store any error
 
   useEffect(() => {
@@ -24,15 +25,15 @@ function Aboutme() {
         const images = data.filter(
           (file) => file.endsWith('0010.jpg') || file.endsWith('.png')
         );
-        const videos = data.filter((file) => file.endsWith('.mp4'));
+        // const videos = data.filter((file) => file.endsWith('.mp4'));
 
         // Set the first image and video from the fetched data
         if (images.length > 0) {
           setImageUrl(images[0]);
         }
-        if (videos.length > 0) {
-          setVideoUrl(videos[0]);
-        }
+        // if (videos.length > 0) {
+        //   setVideoUrl(videos[0]);
+        // }
       })
       .catch((err) => {
         setError('Failed to load media');
@@ -44,21 +45,9 @@ function Aboutme() {
     <Container className='py-5'>
       <Row>
         <Col md={6}>
-          <Card>
-            {error && <p>{error}</p>} {/* Display error if any */}
-            {imageUrl ? (
-              <Card.Img
-                className='aboutme-image'
-                variant='top'
-                src={imageUrl}
-                alt='Julia Koceva'
-              />
-            ) : (
-              <Card.Img variant='top' src='placeholder.jpg' alt='Placeholder' />
-            )}
-          </Card>
+          <AboutMeImage imageUrl={imageUrl} error={error} />
         </Col>
-        <Col md={3}>
+        <Col md={6}>
           <Card.Body>
             <Card.Title>About Julia Kocevas</Card.Title>
             <Card.Text>
@@ -76,22 +65,6 @@ function Aboutme() {
               consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
             </Card.Text>
           </Card.Body>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={3}>
-          {videoUrl ? (
-            <Card>
-              <Card.Body>
-                <video width='100%' height='auto' controls>
-                  <source src={videoUrl} type='video/mp4' />
-                  Your browser does not support the video tag.
-                </video>
-              </Card.Body>
-            </Card>
-          ) : (
-            <p>Loading video...</p>
-          )}
         </Col>
       </Row>
     </Container>
