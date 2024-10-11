@@ -4,3 +4,8 @@
   width: 100%;
   height: auto;
 }
+
+/* Blurry effect for the backdrop of the modal */
+.modal-backdrop {
+  backdrop-filter: blur(40px); /* Adjust the blur strength */
+}
