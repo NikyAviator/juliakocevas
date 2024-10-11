@@ -23,3 +23,32 @@
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+
+.instagram-button {
+  background-color: #e1306c; /* Instagram's primary pink color */
+  border-color: #e1306c;
+  color: white; /* Text color */
+
+  &:hover {
+    background-color: #c13584; /* Darker Instagram shade for hover */
+    border-color: #c13584;
+  }
+}
+
+.instagram-button {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  border: none; /* Remove border */
+  color: white;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+}

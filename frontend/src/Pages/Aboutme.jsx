@@ -72,12 +72,12 @@ function Aboutme() {
             Hello! If you like what you see, you can follow me on:
           </Card.Text>
           {/* Social Media Buttons */}
-          <div className='my-5 mt-4'>
+          <div className='my-5 mx-5 mt-4'>
             <Button
               href='https://www.instagram.com/juliakocevas'
               target='_blank'
               rel='noopener noreferrer'
-              className='social-button my-1'
+              className='social-button instagram-button my-1 my-2'
               variant='primary'
               size='lg'
             >
@@ -87,7 +87,7 @@ function Aboutme() {
               href='https://www.tiktok.com/juliakocevas'
               target='_blank'
               rel='noopener noreferrer'
-              className='social-button'
+              className='social-button my-1 my-4'
               variant='dark'
               size='lg'
             >
