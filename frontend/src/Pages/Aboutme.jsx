@@ -1,9 +1,9 @@
+import '../scss/styles.scss';
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../scss/styles.scss';
 import AboutMeImage from '../Components/AboutMeImage';
 import Button from 'react-bootstrap/Button';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
@@ -51,8 +51,10 @@ function Aboutme() {
         </Col>
         <Col md={6}>
           <Card.Body>
-            <Card.Title>About Julia Kocevas</Card.Title>
-            <Card.Text>
+            <Card.Title className='aboutme-header '>
+              About Julia Kocevas
+            </Card.Title>
+            <Card.Text className='aboutme-text my-5'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
               malesuada. Curabitur consequat quam id libero pharetra, at
@@ -68,7 +70,7 @@ function Aboutme() {
             </Card.Text>
           </Card.Body>
 
-          <Card.Text className='my-5'>
+          <Card.Text className='aboutme-header my-5'>
             Hello! If you like what you see, you can follow me on:
           </Card.Text>
           {/* Social Media Buttons */}

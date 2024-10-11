@@ -52,3 +52,18 @@
     transform: scale(1.05); /* Slight zoom effect */
   }
 }
+
+.aboutme-header {
+  font-family: 'Poppins', sans-serif; // Use 'Poppins' from the imported Google Font
+  font-weight: 500; // Adjust weight (e.g., 500 as imported for bold style)
+  font-size: 1.2rem; // Optional: adjust size if you want the text to be larger or smaller
+  font-style: italic; // Optional: set to 'normal' or 'italic' as needed
+}
+.aboutme-text {
+  font-family: 'Playfair Display', serif; // Apply 'Playfair Display' font
+  font-weight: 500; // Adjust the weight as per the imported styles (400 is normal)
+  font-size: 1.2rem; // Optional: adjust size if needed
+  font-style: normal; // Set to 'italic' or 'normal' as per design
+  line-height: 1.5; // Adjust line height for better readability
+  color: #333; // Optional: adjust the text color
+}
