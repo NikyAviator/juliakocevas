@@ -2,10 +2,9 @@ import '../scss/styles.scss';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import Image from './Image';
 import ModalImage from './ModalImage';
+
 const ArtGallery = () => {
   const [mediaFiles, setMediaFiles] = useState([]);
   const [showModal, setShowModal] = useState(false);
