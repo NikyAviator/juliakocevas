@@ -1,0 +1,10 @@
+/* Hover effect for images and videos */
+.media-item img,
+.media-item video {
+  transition: transform 0.3s ease;
+}
+
+.media-item img:hover,
+.media-item video:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
