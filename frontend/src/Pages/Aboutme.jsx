@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../scss/styles.scss';
 import AboutMeImage from '../Components/AboutMeImage';
+import Button from 'react-bootstrap/Button';
+import { FaInstagram, FaTiktok } from 'react-icons/fa';
 
 function Aboutme() {
   const [imageUrl, setImageUrl] = useState(''); // State to store the fetched image URL
@@ -65,6 +67,33 @@ function Aboutme() {
               consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
             </Card.Text>
           </Card.Body>
+
+          <Card.Text className='my-5'>
+            Hello! If you like what you see, you can follow me on:
+          </Card.Text>
+          {/* Social Media Buttons */}
+          <div className='my-5 mt-4'>
+            <Button
+              href='https://www.instagram.com/juliakocevas'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='social-button my-1'
+              variant='primary'
+              size='lg'
+            >
+              <FaInstagram className='mr-2' /> Instagram
+            </Button>
+            <Button
+              href='https://www.tiktok.com/juliakocevas'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='social-button'
+              variant='dark'
+              size='lg'
+            >
+              <FaTiktok className='mr-2' /> TikTok
+            </Button>
+          </div>
         </Col>
       </Row>
     </Container>
