@@ -7,7 +7,7 @@ const Image = (props) => {
   const isVideo = file.endsWith('.mp4');
 
   return (
-    <Col key={index} md={4} className='mb-4'>
+    <Col key={index} md={4} className='mb-4 my-3'>
       <div className='media-item' onClick={() => handleClick(file)}>
         {isImage && (
           <img src={file} alt={`Artwork ${index}`} className='img-fluid' />

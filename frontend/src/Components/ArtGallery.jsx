@@ -38,7 +38,7 @@ const ArtGallery = () => {
   };
 
   return (
-    <Container className='art-gallery py-5'>
+    <Container className='art-gallery py-3'>
       <Row>
         {mediaFiles.map((file, index) => {
           return (
