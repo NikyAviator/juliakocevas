@@ -2,10 +2,10 @@ import '../scss/styles.scss';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
+import Image from './Image';
+import ModalImage from './ModalImage';
 const ArtGallery = () => {
   const [mediaFiles, setMediaFiles] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -42,55 +42,23 @@ const ArtGallery = () => {
     <Container className='art-gallery py-5'>
       <Row>
         {mediaFiles.map((file, index) => {
-          const isImage = file.endsWith('.jpg') || file.endsWith('.png');
-          const isVideo = file.endsWith('.mp4');
-
           return (
-            <Col key={index} md={4} className='mb-4'>
-              <div className='media-item' onClick={() => handleClick(file)}>
-                {isImage && (
-                  <img
-                    src={file}
-                    alt={`Artwork ${index}`}
-                    className='img-fluid'
-                  />
-                )}
-                {isVideo && (
-                  <video width='100%' height='auto' controls>
-                    <source src={file} type='video/mp4' />
-                    Your browser does not support the video tag.
-                  </video>
-                )}
-                <p>{file}</p>
-              </div>
-            </Col>
+            <Image
+              key={index}
+              file={file}
+              index={index}
+              handleClick={handleClick}
+            />
           );
         })}
       </Row>
-
-      {/* Modal to display the selected image or video */}
+      {/* Pass modal logic to ModalImage */}
       {selectedFile && (
-        <Modal show={showModal} onHide={handleClose} centered>
-          <Modal.Body>
-            {selectedFile.endsWith('.jpg') || selectedFile.endsWith('.png') ? (
-              <img
-                src={selectedFile}
-                alt='Selected Artwork'
-                className='img-fluid'
-              />
-            ) : selectedFile.endsWith('.mp4') ? (
-              <video width='100%' height='auto' controls>
-                <source src={selectedFile} type='video/mp4' />
-                Your browser does not support the video tag.
-              </video>
-            ) : null}
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant='secondary' onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        <ModalImage
+          file={selectedFile}
+          showModal={showModal}
+          handleClose={handleClose}
+        />
       )}
     </Container>
   );

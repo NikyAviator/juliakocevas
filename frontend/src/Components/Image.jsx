@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../scss/styles.scss';
 import Col from 'react-bootstrap/esm/Col';
 const Image = (props) => {
