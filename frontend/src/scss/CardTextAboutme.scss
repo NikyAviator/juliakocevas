@@ -17,16 +17,16 @@
   left: 10px; /* Shift 10px to the right */
   right: -10px;
   bottom: -10px;
-  background-color: #6e555f; /* Darker grey-ish color for the "shadow" effect */
+  background-color: #000000; /* Darker grey-ish color for the "shadow" effect */
   z-index: -1; /* Place behind the text */
   border-radius: 12px; /* Match or slightly increase the rounded corners */
 
   /* Add a blur to the shadow effect */
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
-
-.text-wrapper:hover::before {
-  background-color: #a9a9a9; /* Change to a medium gray on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
+// For Hover Effect
+// .text-wrapper:hover::before {
+//   background-color: #a9a9a9; /* Change to a medium gray on hover */
+//   transform: scale(1.05); /* Slight zoom effect */
+//   transition: transform 0.3s ease, background-color 0.3s ease;
+// }
