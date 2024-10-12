@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import AboutMeImage from '../Components/AboutMeImage';
 import Button from 'react-bootstrap/Button';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import CardTextAboutme from '../Components/CardTextAboutme';
 
 function Aboutme() {
   const [imageUrl, setImageUrl] = useState(''); // State to store the fetched image URL
@@ -55,18 +56,7 @@ function Aboutme() {
               About Julia Kocevas
             </Card.Title>
             <Card.Text className='aboutme-text my-5'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-              malesuada. Curabitur consequat quam id libero pharetra, at
-              consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-              malesuada. Curabitur consequat quam id libero pharetra, at
-              consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-              malesuada. Curabitur consequat quam id libero pharetra, at
-              consequat orci vulputate. Nulla facilisi. Quisque ac velit magna.
+              <CardTextAboutme />
             </Card.Text>
           </Card.Body>
 
