@@ -1,0 +1,48 @@
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 100%; /* Make buttons full width inside their column */
+  max-width: 300px; /* Limit max width */
+}
+
+.social-button svg {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.instagram-button {
+  background-color: #e1306c; /* Instagram's primary pink color */
+  border-color: #e1306c;
+  color: white; /* Text color */
+
+  &:hover {
+    background-color: #c13584; /* Darker Instagram shade for hover */
+    border-color: #c13584;
+  }
+}
+
+.instagram-button {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  border: none; /* Remove border */
+  color: white;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+}

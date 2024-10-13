@@ -8,6 +8,7 @@ import AboutMeImage from '../Components/AboutMeImage';
 import Button from 'react-bootstrap/Button';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import CardTextAboutme from '../Components/CardTextAboutme';
+import InstagramButton from '../Components/InstagramButton';
 
 function Aboutme() {
   const [imageUrl, setImageUrl] = useState(''); // State to store the fetched image URL
@@ -65,16 +66,7 @@ function Aboutme() {
           </Card.Text>
           {/* Social Media Buttons */}
           <div className='my-5 mx-5 mt-4'>
-            <Button
-              href='https://www.instagram.com/juliakocevas'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='social-button instagram-button my-1 my-2'
-              variant='primary'
-              size='lg'
-            >
-              <FaInstagram className='mr-2' /> Instagram
-            </Button>
+            <InstagramButton />
             <Button
               href='https://www.tiktok.com/juliakocevas'
               target='_blank'
