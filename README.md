@@ -95,7 +95,7 @@ touch sticky-footer.scss
 }
 ```
 
-# How to run:
+# How to run for local:
 
 ## cd to root project folder and:
 
@@ -110,3 +110,19 @@ For GCP backend and local frontend:
 ```
 npm run start:gcp
 ```
+
+# Docker:
+
+The frontend:
+
+```
+docker build -t juliakocevas-frontend .
+```
+
+Run the container: (Removed on close):
+
+```
+docker run --rm -p 8080:80 juliakocevas-frontend
+```
+
+[Open on: [localhost/8080](http://localhost:8080) to see]
