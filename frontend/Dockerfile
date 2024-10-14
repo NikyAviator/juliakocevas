@@ -17,8 +17,13 @@ RUN npm run build
 # Step 2: Serve the React app
 FROM nginx:alpine
 
+
+# Copy the custom NGINX configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Copy the build files to the nginx directory
 COPY --from=build /app/dist /usr/share/nginx/html
+
 
 # Expose the port
 EXPOSE 80
