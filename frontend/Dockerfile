@@ -1,5 +1,5 @@
 # Step 1: Build the React app
-FROM node:21 as build
+FROM node:22.9.0 as build
 
 # Set the working directory
 WORKDIR /app

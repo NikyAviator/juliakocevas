@@ -126,3 +126,21 @@ docker run --rm -p 8080:80 juliakocevas-frontend
 ```
 
 [Open on: [localhost/8080](http://localhost:8080) to see]
+
+---
+
+To update the image on Docker Hub:
+
+```
+docker login
+
+docker tag your-frontend-app your-dockerhub-username/your-frontend-app:latest
+
+docker push your-dockerhub-username/your-frontend-app:latest
+```
+
+To get the image from Docker Hub:
+
+```
+docker pull your-dockerhub-username/your-frontend-app:latest
+```
