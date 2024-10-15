@@ -144,3 +144,15 @@ To get the image from Docker Hub:
 ```
 docker pull your-dockerhub-username/your-frontend-app:latest
 ```
+
+Tag your Docker Image to Google Container Registry (GCR):
+
+```
+docker tag your-dockerhub-username/your-frontend-app:latest gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest
+```
+
+Push your Docker image to GCR:
+
+```
+docker push gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest
+```
