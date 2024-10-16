@@ -16,7 +16,7 @@ function Aboutme() {
 
   useEffect(() => {
     // Fetch images and videos from the backend
-    fetch('http://localhost:3001/api/media') // Ensure the correct backend URL
+    fetch('http://localhost:5000/api/artworks') // Ensure the correct backend URL
       .then((res) => {
         if (!res.ok) {
           throw new Error('Network response was not ok');
