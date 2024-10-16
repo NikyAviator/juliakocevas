@@ -18,7 +18,7 @@ services:
       - .env
     volumes:
       - ./backend:/app # Map your backend folder to the container
-      - ./gcp-key.json:/app/gcp-key.json # Mount the keyfile
+      - /home/niky/vscodePC/juliakocevas/gcp-key.json:/app/gcp-key.json # Mount the keyfile
     networks:
       - app-network
 
