@@ -7,7 +7,7 @@ const cors = require('cors');
 // Enable CORS for requests from http://localhost:5173
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: 'http://localhost:8080',
   })
 );
 
