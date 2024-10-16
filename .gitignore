@@ -1,6 +1,4 @@
 node_modules
-/backend
 backend/.env
-backend/.env
-/backend
+backend/gcp-key.json
 
