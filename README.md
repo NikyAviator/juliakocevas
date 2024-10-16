@@ -156,3 +156,17 @@ Push your Docker image to GCR:
 ```
 docker push gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest
 ```
+
+# Docker compose:
+
+To build and start services, in root project folder write in terminal:
+
+```
+docker-compose up --build
+```
+
+--build: Forces a rebuild of the images before starting the containers.
+
+### Frontend will be accessible at http://localhost:8080.
+
+### Backend will be exposed internally and handle API requests on http://localhost:5000.
