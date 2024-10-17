@@ -32,7 +32,7 @@ function Aboutme() {
 
         // Set the first image and video from the fetched data
         if (images.length > 0) {
-          setImageUrl(images[0]);
+          setImageUrl(images[0].imageUrl);
         }
         // if (videos.length > 0) {
         //   setVideoUrl(videos[0]);
