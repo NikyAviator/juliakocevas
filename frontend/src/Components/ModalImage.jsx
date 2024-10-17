@@ -4,8 +4,9 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 const ModalImage = ({ file, showModal, handleClose }) => {
-  const isImage = file.endsWith('.jpg') || file.endsWith('.png');
-  const isVideo = file.endsWith('.mp4');
+  const isImage =
+    file.imageUrl.endsWith('.jpg') || file.imageUrl.endsWith('.png');
+  const isVideo = file.imageUrl.endsWith('.mp4');
 
   return (
     <Modal show={showModal} onHide={handleClose} centered>

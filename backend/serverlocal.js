@@ -38,7 +38,9 @@ app.get('/api/media', (req, res) => {
     // Filter to return only jpg, png, and mp4 files
     const mediaFiles = files.filter(
       (file) =>
-        file.endsWith('.jpg') || file.endsWith('.png') || file.endsWith('.mp4')
+        file.imageUrl.endsWith('.jpg') ||
+        file.imageUrl.endsWith('.png') ||
+        file.imageUrl.endsWith('.mp4')
     );
 
     // Map the file names to their URL paths

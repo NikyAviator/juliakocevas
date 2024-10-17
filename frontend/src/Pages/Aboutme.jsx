@@ -27,7 +27,8 @@ function Aboutme() {
         console.log('Fetched media:', data); // Log the response to verify
         // Filter for images and videos from the media files
         const images = data.filter(
-          (file) => file.endsWith('0010.jpg') || file.endsWith('.png')
+          (file) =>
+            file.imageUrl.endsWith('0010.jpg') || file.imageUrl.endsWith('.png')
         );
         // const videos = data.filter((file) => file.endsWith('.mp4'));
 
