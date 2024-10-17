@@ -5,11 +5,12 @@ const app = express();
 const cors = require('cors');
 
 // Enable CORS for requests from the frontend
-app.use(
-  cors({
-    origin: 'http://localhost:8080',
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: 'http://localhost:8080',
+//   })
+// );
 
 // Initialize Google Cloud Storage
 const storage = new Storage({
