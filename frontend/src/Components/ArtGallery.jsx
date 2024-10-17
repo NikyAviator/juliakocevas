@@ -19,7 +19,6 @@ const ArtGallery = () => {
         return res.json();
       })
       .then((data) => {
-        console.log('Fetched media files:', data); // Log the response to verify
         setMediaFiles(data); // Set media files state
       })
       .catch((err) => console.error('Error fetching media files:', err));

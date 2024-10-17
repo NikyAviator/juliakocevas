@@ -24,7 +24,6 @@ function Aboutme() {
         return res.json();
       })
       .then((data) => {
-        console.log('Fetched media:', data); // Log the response to verify
         // Filter for images and videos from the media files
         const images = data.filter(
           (file) =>

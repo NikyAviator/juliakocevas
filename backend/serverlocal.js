@@ -20,9 +20,6 @@ app.use(express.static(path.join(__dirname, '..', 'frontend', 'public')));
 app.get('/api/media', (req, res) => {
   const publicDir = path.join(__dirname, '..', 'frontend', 'public', 'media'); // Ensure this path is correct
 
-  // Log the directory path for debugging
-  console.log('Reading files from:', publicDir);
-
   // Check if the media directory exists
   if (!fs.existsSync(publicDir)) {
     return res.status(500).json({ error: 'Media directory does not exist' });
