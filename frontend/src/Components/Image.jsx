@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/esm/Col';
 const Image = (props) => {
   const { file, index, handleClick } = props;
 
-  console.log('file', file); // Log the file to verify
   const isImage =
     file.imageUrl.endsWith('.jpg') || file.imageUrl.endsWith('.png');
   const isVideo = file.imageUrl.endsWith('.mp4');
