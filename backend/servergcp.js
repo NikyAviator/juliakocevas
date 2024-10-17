@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 
-// Enable CORS for requests from http://localhost:5173
+// Enable CORS for requests from the frontend
 app.use(
   cors({
     origin: 'http://localhost:8080',
