@@ -12,10 +12,14 @@ const ModalImage = ({ file, showModal, handleClose }) => {
     <Modal show={showModal} onHide={handleClose} centered>
       <Modal.Body>
         {isImage ? (
-          <img src={file} alt='Selected Artwork' className='img-fluid' />
+          <img
+            src={file.imageUrl}
+            alt='Selected Artwork'
+            className='img-fluid'
+          />
         ) : isVideo ? (
           <video width='100%' height='auto' controls>
-            <source src={file} type='video/mp4' />
+            <source src={file.imageUrl} type='video/mp4' />
             Your browser does not support the video tag.
           </video>
         ) : null}
