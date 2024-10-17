@@ -169,4 +169,4 @@ docker-compose up --build
 
 ### Frontend will be accessible at http://localhost:8080.
 
-### Backend will be exposed internally and handle API requests on http://localhost:5000.
+### Backend will be exposed internally and handle API requests on http://localhost:5000/api/artworks.
