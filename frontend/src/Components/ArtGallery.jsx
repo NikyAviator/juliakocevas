@@ -11,7 +11,7 @@ const ArtGallery = () => {
   const [selectedFile, setSelectedFile] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/artworks') // Ensure correct backend URL
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artworks`) // Ensure correct backend URL
       .then((res) => {
         if (!res.ok) {
           throw new Error('Network response was not ok');
