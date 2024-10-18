@@ -170,3 +170,14 @@ docker-compose up --build
 ### Frontend will be accessible at http://localhost:8080.
 
 ### Backend will be exposed internally and handle API requests on http://localhost:5000/api/artworks.
+
+---
+
+# GCP Arifact Registry update
+
+```
+gcloud auth login
+gcloud auth configure-docker
+
+docker push gcr.io/your-gcp-project-id/juliakocevas-frontend
+```
