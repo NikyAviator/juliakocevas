@@ -4,17 +4,9 @@ const CardTextAboutme = () => {
   return (
     <div className='text-wrapper'>
       {' '}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-      odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
-      Curabitur consequat quam id libero pharetra, at consequat orci vulputate.
-      Nulla facilisi. Quisque ac velit magna. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
-      vestibulum. Cras venenatis euismod malesuada. Curabitur consequat quam id
-      libero pharetra, at consequat orci vulputate. Nulla facilisi. Quisque ac
-      velit magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-      malesuada. Curabitur consequat quam id libero pharetra, at consequat orci
-      vulputate. Nulla facilisi. Quisque ac velit magna.
+      Hello! My name is Julia. I am an artist with roots in both Sweden and
+      Bulgaria. This website is a work in progress, so stay tuned as I continue
+      to share my artistic journey with you!
     </div>
   );
 };

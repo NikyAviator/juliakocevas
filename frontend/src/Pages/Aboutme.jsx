@@ -53,16 +53,14 @@ function Aboutme() {
         </Col>
         <Col md={6}>
           <Card.Body>
-            <Card.Title className='aboutme-header '>
-              About Julia Kocevas
-            </Card.Title>
+            <Card.Title className='aboutme-header '>About me:</Card.Title>
             <Card.Text className='aboutme-text my-5'>
               <CardTextAboutme />
             </Card.Text>
           </Card.Body>
 
           <Card.Text className='aboutme-header my-5'>
-            Hello! If you like what you see, you can follow me on:
+            If you like what you see, you can follow me on:
           </Card.Text>
           {/* Social Media Buttons */}
           <div className='my-5 mx-5 mt-4'>
