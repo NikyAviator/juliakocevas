@@ -5,7 +5,7 @@ import ArtGallery from '../Components/ArtGallery';
 const Home = () => {
   return (
     <Container className='py-5'>
-      <h1 id='h1'>Welcome to my digital artgallery</h1>
+      <h1 id='h1'>Welcome!</h1>
 
       <ArtGallery />
     </Container>

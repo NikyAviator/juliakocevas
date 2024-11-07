@@ -4,3 +4,4 @@ backend/gcp-key.json
 .env
 gcp-key*.json
 frontend/nginx.conf
+deploy-juliakocevas.sh
