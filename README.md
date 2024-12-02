@@ -1,6 +1,6 @@
 # juliakocevas
 
-A website for my sister than is an artist.
+A website for my sister that is an artist.
 
 **Let's start with the frontend:**
 
