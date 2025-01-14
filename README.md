@@ -2,6 +2,47 @@
 
 A website for my sister that is an artist.
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Frontend Setup](#frontend-setup)
+  - [Create the Vite React Project](#create-the-vite-react-project)
+  - [Installing Dependencies](#installing-dependencies)
+  - [Running the Frontend Locally](#running-the-frontend-locally)
+- [Project Structure](#project-structure)
+  - [Cleanup and Adding Basic Structure](#cleanup-and-adding-basic-structure)
+  - [SCSS Setup](#scss-setup)
+- [Docker Setup](#docker-setup)
+  - [Building the Frontend Image](#building-the-frontend-image)
+  - [Running the Container Locally](#running-the-container-locally)
+  - [Pushing Images to Docker Hub](#pushing-images-to-docker-hub)
+  - [Pushing Images to Google Container Registry](#pushing-images-to-google-container-registry)
+- [Docker Compose](#docker-compose)
+  - [Setting Up Docker Compose](#setting-up-docker-compose)
+  - [Accessing Services Locally](#accessing-services-locally)
+- [Hosting on Google Cloud Platform (GCP)](#hosting-on-google-cloud-platform-gcp)
+  - [GCP Artifact Registry](#gcp-artifact-registry)
+  - [Deploying to Cloud Run](#deploying-to-cloud-run)
+  - [Domain Mapping](#domain-mapping)
+- [Kubernetes (K8s)](#kubernetes-k8s)
+  - [What is Kubernetes?](#what-is-kubernetes)
+  - [Key Kubernetes Concepts](#key-kubernetes-concepts)
+    - [Cluster](#cluster)
+    - [Nodes](#nodes)
+    - [Master Node](#master-node)
+    - [Worker Node](#worker-node)
+    - [Pods](#pods)
+    - [Containers](#containers)
+    - [Services](#services)
+  - [Setting Up Kubernetes Locally](#setting-up-kubernetes-locally)
+    - [Installing Minikube](#installing-minikube)
+    - [Creating Kubernetes Configuration Files](#creating-kubernetes-configuration-files)
+    - [Testing the Setup Locally](#testing-the-setup-locally)
+- [Future Enhancements](#future-enhancements)
+  - [Bash Scripts for Automation](#bash-scripts-for-automation)
+  - [Adding CI/CD Pipelines](#adding-cicd-pipelines)
+- [Acknowledgments](#acknowledgments)
+
 **Let's start with the frontend:**
 
 ## Create the vite react project:
