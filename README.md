@@ -204,3 +204,50 @@ It handles things like:
 3. Management (Monitoring and replacement of containers)
 
 We can and we later will write a **Kubernetes Configuration** that Any Cloud provider or Self Hosted can understand and deploy your end state.
+
+Let us now explain a few **key K8s concepts** that can clarify how all this works:
+
+### 1. Cluster
+
+A **Kubernetes cluster** is a collection of machines (physical or virtual) that work together to run and manage containerized applications. It usually consists of:
+
+- One or more Master Nodes (the control plane).
+- One or more Worker Nodes (where your workloads run).
+
+All these nodes communicate with each other, ensuring your applications run as expected, can scale, and are kept in a desired state.
+
+### 2. Nodes
+
+A **node** is a single machine (whether physical server or virtual machine) within a Kubernetes cluster. There are generally two types of nodes:
+
+- Master Node – Responsible for managing and controlling the cluster (the control plane).
+- Worker Node – Responsible for running your workloads (the containerized applications).
+
+Nodes have specific Kubernetes processes installed (like the kubelet, container runtime, etc.) that allow them to communicate with the cluster and host containers.
+
+### 3. Master Node
+
+The **Master Node** (also referred to as the Control Plane) controls and manages the entire Kubernetes cluster. It makes decisions about scheduling, scaling, and how workloads are orchestrated. Key components on the master node include:
+
+- **API Server**: The front-end to the Kubernetes control plane. It handles requests from users and tools (CLI, dashboard, etc.) and exposes the Kubernetes API.
+- **etcd**: A consistent and highly available key-value store where Kubernetes stores all cluster data.
+- **Scheduler**: Determines which node a new pod will be assigned to, based on resource availability and other constraints.
+- **Controller Manager**: Runs background processes that handle routine tasks (e.g., ensuring the correct number of pods, dealing with node failures, etc.).
+
+### 4. Worker Node
+
+A **Worker Node** actually runs the applications (containers) defined by your Kubernetes configuration. Key components on each worker node include:
+
+- **kubelet**: An agent that ensures containers run in a pod. It communicates with the API Server, receives instructions, and reports back on pod health and status.
+- **Container Runtime**: Responsible for running containers (e.g., Docker, containerd, CRI-O).
+- **kube-proxy**: Manages network rules on each node, allowing network communication to and from pods (e.g., load balancing, forwarding requests to correct pods).
+
+### 5. Pods
+
+A **Pod** is the smallest deployable unit in Kubernetes. You can think of it as a wrapper around one or more containers that share:
+
+- A network namespace (they share the same IP address).
+- Storage volumes (if configured).
+- Configuration such as environment variables.
+
+In most cases, you’ll have **one application container per pod**, but you can also have “sidecar” containers that complement the main container (e.g., a logging or monitoring agent).
