@@ -8,7 +8,7 @@ A website for my sister that is an artist.
 - [Frontend Setup](#frontend-setup)
   - [Create the Vite React Project](#create-the-vite-react-project)
   - [Installing Dependencies](#installing-dependencies)
-  - [Running the Frontend Locally](#running-the-frontend-locally)
+  - [Running the Project Locally](#running-the-project-locally)
 - [Project Structure](#project-structure)
   - [Cleanup and Adding Basic Structure](#cleanup-and-adding-basic-structure)
   - [SCSS Setup](#scss-setup)
@@ -24,28 +24,11 @@ A website for my sister that is an artist.
   - [GCP Artifact Registry](#gcp-artifact-registry)
   - [Deploying to Cloud Run](#deploying-to-cloud-run)
   - [Domain Mapping](#domain-mapping)
-- [Kubernetes (K8s)](#kubernetes-k8s)
-  - [What is Kubernetes?](#what-is-kubernetes)
-  - [Key Kubernetes Concepts](#key-kubernetes-concepts)
-    - [Cluster](#cluster)
-    - [Nodes](#nodes)
-    - [Master Node](#master-node)
-    - [Worker Node](#worker-node)
-    - [Pods](#pods)
-    - [Containers](#containers)
-    - [Services](#services)
-  - [Setting Up Kubernetes Locally](#setting-up-kubernetes-locally)
-    - [Installing Minikube](#installing-minikube)
-    - [Creating Kubernetes Configuration Files](#creating-kubernetes-configuration-files)
-    - [Testing the Setup Locally](#testing-the-setup-locally)
-- [Future Enhancements](#future-enhancements)
-  - [Bash Scripts for Automation](#bash-scripts-for-automation)
-  - [Adding CI/CD Pipelines](#adding-cicd-pipelines)
 - [Acknowledgments](#acknowledgments)
 
-**Let's start with the frontend:**
+## Frontend Setup
 
-## Create the vite react project:
+### Create the Vite React Project:
 
 1. npm init vite@latest . (creates project in same folder)
 
@@ -65,17 +48,31 @@ npm install --save-dev @vitejs/plugin-react eslint eslint-plugin-react eslint-pl
 
 OPTIONAL: X. npm install reactstrap (https://reactstrap.github.io/?path=/story/home-installation--page) X. npm install mdb-ui-kit (https://mdbootstrap.com/docs/standard/getting-started/installation/)
 
-## To run:
+## Running the Project Locally:
 
-To run: cd juliakocevas/frontend/
+To run the **frontend** locally: cd juliakocevas/frontend/
 
 ```
 npm run dev
 ```
 
+### Running the Frontend and Backend:
+
+For **local backend** (serving of the files/media) & **local frontend**.
+
+```
+npm run start
+```
+
+For **GCP backend** & local **frontend**:
+
+```
+npm run start:gcp
+```
+
 ---
 
-# Customize:
+# Project Structure:
 
 ### Cleanup and adding basic structure:
 
@@ -136,23 +133,7 @@ touch sticky-footer.scss
 }
 ```
 
-# How to run for local:
-
-## cd to root project folder and:
-
-For local backend (serving of the files) and local frontend.
-
-```
-npm run start
-```
-
-For GCP backend and local frontend:
-
-```
-npm run start:gcp
-```
-
-# Docker:
+# Docker Setup:
 
 The frontend:
 
