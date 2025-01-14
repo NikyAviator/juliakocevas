@@ -18,13 +18,7 @@ A website for my sister that is an artist.
   - [Pushing Images to Docker Hub](#pushing-images-to-docker-hub)
   - [Pushing Images to Google Container Registry](#pushing-images-to-google-container-registry)
 - [Docker Compose](#docker-compose)
-  - [Setting Up Docker Compose](#setting-up-docker-compose)
-  - [Accessing Services Locally](#accessing-services-locally)
-- [Hosting on Google Cloud Platform (GCP)](#hosting-on-google-cloud-platform-gcp)
-  - [GCP Artifact Registry](#gcp-artifact-registry)
-  - [Deploying to Cloud Run](#deploying-to-cloud-run)
-  - [Domain Mapping](#domain-mapping)
-- [Acknowledgments](#acknowledgments)
+- [Kubernetes / K8s](#kubernetes-/-k8s)
 
 ## Frontend Setup
 
@@ -89,6 +83,8 @@ Create folders in src/ :
 mkdir Components Pages scss
 ```
 
+### SCSS Setup
+
 The styles.scss file:
 
 ```
@@ -135,13 +131,13 @@ touch sticky-footer.scss
 
 # Docker Setup:
 
-The frontend:
+## Building the Frontend Image:
 
 ```
 docker build -t juliakocevas-frontend .
 ```
 
-Run the container: (Removed on close):
+## Running the Container Locally:
 
 ```
 docker run --rm -p 8080:80 juliakocevas-frontend
@@ -151,7 +147,7 @@ docker run --rm -p 8080:80 juliakocevas-frontend
 
 ---
 
-To update the image on Docker Hub:
+## Pushing Images to Docker Hub:
 
 ```
 docker login
@@ -167,7 +163,7 @@ To get the image from Docker Hub:
 docker pull your-dockerhub-username/your-frontend-app:latest
 ```
 
-Tag your Docker Image to Google Container Registry (GCR):
+Pushing Images to Google Container Registry:
 
 ```
 docker tag your-dockerhub-username/your-frontend-app:latest gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest
@@ -179,7 +175,9 @@ Push your Docker image to GCR:
 docker push gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest
 ```
 
-# Docker compose (not working atm, working on a fix):
+# Docker Compose:
+
+**(Not working at the moment, working on a fix!)**
 
 To build and start services, in root project folder write in terminal:
 
@@ -195,7 +193,7 @@ docker-compose up --build
 
 ---
 
-# GCP Arifact Registry update
+## Pushing Images to Google Container Registry
 
 ```
 gcloud auth login
