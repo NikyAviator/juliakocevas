@@ -251,3 +251,27 @@ A **Pod** is the smallest deployable unit in Kubernetes. You can think of it as 
 - Configuration such as environment variables.
 
 In most cases, you’ll have **one application container per pod**, but you can also have “sidecar” containers that complement the main container (e.g., a logging or monitoring agent).
+
+### 6. Containers
+
+**Containers** are the actual packages of software that contain your application code and all its dependencies. Kubernetes itself doesn’t create containers; instead, it relies on a **container runtime** (such as Docker or containerd) to run them.
+
+You define container images (e.g., with a Dockerfile).
+Kubernetes schedules and manages how many container instances (pods) should run and on which worker nodes.
+
+### 7. Services
+
+A Service in Kubernetes is an abstraction that provides a stable endpoint (IP or DNS name) and load-balancing across a set of pods. Because pods are ephemeral—they can come and go, and their IP addresses can change—Services allow you to expose and communicate with your applications reliably.
+
+- ClusterIP: Exposes the Service internally to the cluster.
+- NodePort: Exposes the Service on each node’s IP at a static port.
+- LoadBalancer: Exposes the Service externally using a cloud provider’s load balancer.
+
+The primary goal is to decouple where pods are running from how other services or external clients find and access them.
+
+### Putting it All Together
+
+1. You (or your CI/CD system) define container images and specify how many replicas (pods) you need.
+2. The **Master Node** (control plane) schedules these pods to run on the **Worker Nodes**.
+3. Each **Pod** runs one or more **Containers**.
+4. You create a **Service** to provide a stable network endpoint to these pods and to load-balance traffic among them.
