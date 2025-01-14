@@ -181,3 +181,26 @@ gcloud auth configure-docker
 
 docker push gcr.io/your-gcp-project-id/juliakocevas-frontend
 ```
+
+---
+
+# Kubernetes / K8s
+
+Now we have dockerized our project, let us take things to the next level by orchestrating and taking full control over our project by diving deep together into the world of K8s!
+
+The official website:
+
+```
+https://kubernetes.io/
+```
+
+## What is Kubernetes / K8s?
+
+The TLDR is: An open-source system for orchestrating container deployments.
+It handles things like:
+
+1. Automatic Deployment
+2. Scaling & Load Balancing
+3. Management (Monitoring and replacement of containers)
+
+We can and we later will write a **Kubernetes Configuration** that Any Cloud provider or Self Hosted can understand and deploy your end state.
