@@ -4,7 +4,6 @@ A website for my sister that is an artist.
 
 # Table of Contents
 
-- [Introduction](#introduction)
 - [Frontend Setup](#frontend-setup)
   - [Create the Vite React Project](#create-the-vite-react-project)
   - [Installing Dependencies](#installing-dependencies)
@@ -18,7 +17,7 @@ A website for my sister that is an artist.
   - [Pushing Images to Docker Hub](#pushing-images-to-docker-hub)
   - [Pushing Images to Google Container Registry](#pushing-images-to-google-container-registry)
 - [Docker Compose](#docker-compose)
-- [Kubernetes / K8s](#kubernetes-/-k8s)
+- [Kubernetes / K8s](#kubernetes--k8s)
 
 ## Frontend Setup
 
@@ -175,6 +174,17 @@ Push your Docker image to GCR:
 docker push gcr.io/[PROJECT_ID]/[IMAGE_NAME]:latest
 ```
 
+---
+
+## Pushing Images to Google Container Registry
+
+```
+gcloud auth login
+gcloud auth configure-docker
+
+docker push gcr.io/your-gcp-project-id/juliakocevas-frontend
+```
+
 # Docker Compose:
 
 **(Not working at the moment, working on a fix!)**
@@ -190,17 +200,6 @@ docker-compose up --build
 **Frontend** will be accessible at http://localhost:8080.
 
 **Backend** will be exposed internally and handle API requests on http://localhost:5000/api/artworks.
-
----
-
-## Pushing Images to Google Container Registry
-
-```
-gcloud auth login
-gcloud auth configure-docker
-
-docker push gcr.io/your-gcp-project-id/juliakocevas-frontend
-```
 
 ---
 
