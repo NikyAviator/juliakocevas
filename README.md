@@ -294,3 +294,21 @@ The primary goal is to decouple where pods are running from how other services o
 2. The **Master Node** (control plane) schedules these pods to run on the **Worker Nodes**.
 3. Each **Pod** runs one or more **Containers**.
 4. You create a **Service** to provide a stable network endpoint to these pods and to load-balance traffic among them.
+
+---
+
+# Installing Kubernetes locally
+
+When learning Kubernetes, it’s often easiest to run everything locally on your computer. On Arch Linux (or EndeavourOS, Manjaro, etc.), there are multiple ways to spin up a local K8s cluster. Below are a few popular options:
+
+1. Minikube – The most commonly used local K8s setup.
+2. k3s – A lightweight Kubernetes distribution from Rancher.
+3. MicroK8s – A Canonical-developed lightweight K8s option.
+
+We will use Minikube to host the website locally on a cluster on your computer before we host it on any Cloud Provider (GCP in this case).
+
+Always refer to the Arch Wiki when in doubt about the installation:
+
+```
+https://wiki.archlinux.org/title/Kubernetes
+```
