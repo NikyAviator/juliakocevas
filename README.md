@@ -332,3 +332,33 @@ https://nubenetes.com/matrix-table/
 ### Minikube Command Basics
 
 1. Start Minikube
+
+```bash
+minikube start
+```
+
+- By default, this will try to detect your container runtime (e.g., Docker) or VM driver (e.g., VirtualBox).
+
+- **Optional**: Specify a driver:
+
+```bash
+minikube start --driver=docker
+```
+
+2. Stop Minikube
+
+```bash
+minikube stop
+```
+
+3. Delete Minikube Cluster
+
+```bash
+minikube delete
+```
+
+4. Check status
+
+```bash
+minikube status
+```
