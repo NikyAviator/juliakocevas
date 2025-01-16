@@ -307,8 +307,28 @@ When learning Kubernetes, it’s often easiest to run everything locally on your
 
 We will use Minikube to host the website locally on a cluster on your computer before we host it on any Cloud Provider (GCP in this case).
 
-Always refer to the Arch Wiki when in doubt about the installation:
+Always refer to the Arch Wiki & Minikube docs when in doubt about the installation etc:
 
 ```
 https://wiki.archlinux.org/title/Kubernetes
 ```
+
+```
+https://minikube.sigs.k8s.io/docs/
+```
+
+Kubernetes Distributions (Alternatives):
+
+```
+https://github.com/mikucat0309/awesome-kubernetes-distro
+```
+
+```
+https://nubenetes.com/matrix-table/
+```
+
+---
+
+### Minikube Command Basics
+
+1. Start Minikube
