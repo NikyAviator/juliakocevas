@@ -329,7 +329,13 @@ https://nubenetes.com/matrix-table/
 
 ---
 
-### Minikube Command Basics
+### Minikube Command
+
+minikube docs:
+
+```
+https://minikube.sigs.k8s.io/docs/
+```
 
 1. Start Minikube
 
