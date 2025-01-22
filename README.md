@@ -381,6 +381,12 @@ minikube delete
 minikube status
 ```
 
+5. More info:
+
+```bash
+minikube dashboard
+```
+
 ---
 
 ### Kubectl Commands
