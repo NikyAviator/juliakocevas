@@ -390,3 +390,33 @@ Command line tool (kubectl):
 ```
 https://kubernetes.io/docs/reference/kubectl/
 ```
+
+1. Kubectl help:
+
+```bash
+kubectl help
+```
+
+2. Kubectl create deployment:
+
+```bash
+kubectl create deployment first-app --image=
+```
+
+3. Get more info about the deployment:
+
+```bash
+kubectl get deployments
+```
+
+```bash
+kubectl get pods
+```
+
+4. Delete deployments:
+
+```bash
+kubectl delete deployments first-app
+```
+
+5. Images need to be pulled from Docker Hub:
