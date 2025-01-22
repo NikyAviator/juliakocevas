@@ -18,6 +18,18 @@ A website for my sister that is an artist.
   - [Pushing Images to Google Container Registry](#pushing-images-to-google-container-registry)
 - [Docker Compose](#docker-compose)
 - [Kubernetes / K8s](#kubernetes--k8s)
+  - [What is Kubernetes?](#what-is-kubernetes)
+  - [Key Kubernetes Concepts](#key-kubernetes-concepts)
+    - [Cluster](#cluster)
+    - [Nodes](#nodes)
+    - [Master Node](#master-node)
+    - [Worker Node](#worker-node)
+    - [Pods](#pods)
+    - [Containers](#containers)
+    - [Services](#services)
+  - [Installing Minikube](#installing-minikube)
+  - [Minikube Commands](#minikube-commands)
+  - [Kubectl Commands](#kubectl-commands)
 
 ## Frontend Setup
 
@@ -329,7 +341,7 @@ https://nubenetes.com/matrix-table/
 
 ---
 
-### Minikube Command
+### Minikube Commands
 
 minikube docs:
 
@@ -367,4 +379,14 @@ minikube delete
 
 ```bash
 minikube status
+```
+
+---
+
+### Kubectl Commands
+
+Command line tool (kubectl):
+
+```
+https://kubernetes.io/docs/reference/kubectl/
 ```
