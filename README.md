@@ -400,7 +400,7 @@ kubectl help
 2. Kubectl create deployment:
 
 ```bash
-kubectl create deployment first-app --image=
+kubectl create deployment first-app --image=eclair2093/kub-first-app
 ```
 
 3. Get more info about the deployment:
@@ -420,3 +420,13 @@ kubectl delete deployments first-app
 ```
 
 5. Images need to be pulled from Docker Hub:
+
+I am first showing a simple NodeJS project with two endpoints, when we have the hang of that we will continue with the images for this project!
+
+```bash
+docker tag kub-first-app eclair2093/kub-first-app
+```
+
+```bash
+docker push eclair2093/kub-first-app
+```
