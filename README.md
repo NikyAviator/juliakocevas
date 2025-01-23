@@ -8,6 +8,7 @@ A website for my sister that is an artist.
   - [Create the Vite React Project](#create-the-vite-react-project)
   - [Installing Dependencies](#installing-dependencies)
   - [Running the Project Locally](#running-the-project-locally)
+  - [Running the Frontend and Backend](#running-the-frontend-and-backend)
 - [Project Structure](#project-structure)
   - [Cleanup and Adding Basic Structure](#cleanup-and-adding-basic-structure)
   - [SCSS Setup](#scss-setup)
@@ -27,7 +28,7 @@ A website for my sister that is an artist.
     - [Pods](#pods)
     - [Containers](#containers)
     - [Services](#services)
-  - [Installing Minikube](#installing-minikube)
+  - [Installing Kubernetes Locally](#installing-kubernetes-locally)
   - [Minikube Commands](#minikube-commands)
   - [Kubectl Commands](#kubectl-commands)
 
@@ -436,3 +437,7 @@ docker tag kub-first-app eclair2093/kub-first-app
 ```bash
 docker push eclair2093/kub-first-app
 ```
+
+---
+
+# Exposing
