@@ -460,3 +460,33 @@ kubectl expose deployment first-app --type=LoadBalancer --port=8080
 - A `Service` named first-app will be created.
 - The application will be accessible on port `8080`.
 - Depending on the service `--type` specified, the application will be exposed differently (e.g., internal-only, external access via a load balancer, etc.).
+
+---
+
+### Kubernetes Service Types
+
+Kubernetes Services are used to expose applications running in a cluster to different kinds of network access. Here's a summary of the main types of Services:
+
+1. **ClusterIP (Default)**
+
+- **Description**: Exposes the application internally within the cluster. This type is used when you only need other applications within the cluster to communicate with the service.
+
+- **Use Case**: Internal microservices communication.
+
+2. **NodePort**
+
+- **Description**: Exposes the application **externally** on a static port (the same port on all nodes). You can access the service using the `<NodeIP>:<NodePort>` address.
+
+- **Use Case**: Useful for debugging or quick external access without requiring a cloud provider's load balancer.
+
+3. **LoadBalancer**
+
+- **Description**: Exposes the application externally using a cloud provider's load balancer (e.g., AWS ELB, Google Cloud Load Balancer, etc.).
+
+- **Use Case**: Production-grade applications that require external access with high availability and scalability.
+
+4. **ExternalName**
+
+- **Description**: Maps a Service to an external DNS name. Instead of routing traffic to Pods, it redirects traffic to an external resource.
+
+- **Use Case**: When you need to redirect traffic to an external service (e.g., a managed database outside the cluster).
