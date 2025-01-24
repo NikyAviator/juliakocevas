@@ -31,6 +31,8 @@ A website for my sister that is an artist.
   - [Installing Kubernetes Locally](#installing-kubernetes-locally)
   - [Minikube Commands](#minikube-commands)
   - [Kubectl Commands](#kubectl-commands)
+  - [Exposing a Deployment with `kubectl expose`](#exposing-a-deployment-with-kubectl-expose)
+  - [Kubernetes Service Types](#kubernetes-service-types)
 
 ## Frontend Setup
 
