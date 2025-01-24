@@ -440,4 +440,23 @@ docker push eclair2093/kub-first-app
 
 ---
 
-# Exposing
+### Exposing a Deployment with `kubectl expose`
+
+The `kubectl expose` command is used to create a Kubernetes **Service** that exposes a Deployment or Pod to the network. This allows you to access the application from outside the cluster or internally within the cluster.
+
+```bash
+kubectl expose deployment first-app --type=LoadBalancer --port=8080
+```
+
+#### What does this command do?
+
+1. `kubectl expose`: Creates a Kubernetes Service to expose the specified Deployment (first-app in this case).
+2. `deployment first-app`: Specifies the Deployment to expose. The Deployment must already exist in your cluster.
+3. `--type=LoadBalancer`: Specifies the Service type. This determines how the application will be accessible (more on this below).
+4. `--port=8080`: The port on which the Service will listen for incoming traffic and forward it to the application.
+
+#### Once the command is executed:
+
+- A `Service` named first-app will be created.
+- The application will be accessible on port `8080`.
+- Depending on the service `--type` specified, the application will be exposed differently (e.g., internal-only, external access via a load balancer, etc.).
