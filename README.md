@@ -33,6 +33,11 @@ A website for my sister that is an artist.
   - [Kubectl Commands](#kubectl-commands)
   - [Exposing a Deployment with `kubectl expose`](#exposing-a-deployment-with-kubectl-expose)
   - [Kubernetes Service Types](#kubernetes-service-types)
+    - [ClusterIP](#clusterip)
+    - [NodePort](#nodeport)
+    - [LoadBalancer](#loadbalancer)
+    - [ExternalName](#externalname)
+  - [Imperative Approach](#imperative-approach)
 
 ## Frontend Setup
 
@@ -495,6 +500,8 @@ Kubernetes Services are used to expose applications running in a cluster to diff
 
 ---
 
+#### Imperative Approach:
+
 To check that everything is up and kickin':
 
 ```bash
@@ -514,6 +521,8 @@ kubernetes   ClusterIP      10.96.0.1       <none>        443/TCP          14d
 ```
 
 To reach our cluster locally we need to map a Port to an IP address with the following command:
+
+Note: When using Minikube, LoadBalancer services will show `<pending>` for `EXTERNAL-IP` because Minikube does not create a cloud load balancer. Instead, you can access the service via `minikube service` to map it to a local port.
 
 ```bash
 minikube service first-app
