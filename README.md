@@ -492,3 +492,17 @@ Kubernetes Services are used to expose applications running in a cluster to diff
 - **Description**: Maps a Service to an external DNS name. Instead of routing traffic to Pods, it redirects traffic to an external resource.
 
 - **Use Case**: When you need to redirect traffic to an external service (e.g., a managed database outside the cluster).
+
+---
+
+To check that everything is up and kickin':
+
+```bash
+kubectl get pods -A
+```
+
+and our services:
+
+```bash
+kubectl get services
+```
