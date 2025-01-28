@@ -506,3 +506,31 @@ and our services:
 ```bash
 kubectl get services
 ```
+
+```
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+first-app    LoadBalancer   10.110.99.224   <pending>     8080:31070/TCP   11m
+kubernetes   ClusterIP      10.96.0.1       <none>        443/TCP          14d
+```
+
+To reach our cluster locally we need to map a Port to an IP address with the following command:
+
+```bash
+minikube service first-app
+```
+
+```
+|-----------|-----------|-------------|---------------------------|
+| NAMESPACE |   NAME    | TARGET PORT |            URL            |
+|-----------|-----------|-------------|---------------------------|
+| default   | first-app |        8080 | http://192.168.49.2:31070 |
+|-----------|-----------|-------------|---------------------------|
+🏃  Starting tunnel for service first-app.
+|-----------|-----------|-------------|------------------------|
+| NAMESPACE |   NAME    | TARGET PORT |          URL           |
+|-----------|-----------|-------------|------------------------|
+| default   | first-app |             | http://127.0.0.1:45625 |
+|-----------|-----------|-------------|------------------------|
+🎉  Opening service default/first-app in default browser...
+❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
+```
