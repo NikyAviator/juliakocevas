@@ -598,3 +598,27 @@ first-app-74dd54458b-mc27z   1/1     Running   8 (73m ago)   7d1h
 ```
 
 ---
+
+#### Scaling to Zero (Stopping the App)
+
+If you need to **stop** the application but keep the Deployment definition:
+
+```bash
+kubectl scale deployment/first-app --replicas=0
+```
+
+Check the Pods again:
+
+```bash
+kubectl get pods
+```
+
+Expected output:
+
+```arduino
+No resources found in default namespace.
+```
+
+The application is now stopped, but you **haven't deleted** the deployment.
+
+---
