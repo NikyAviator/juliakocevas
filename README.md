@@ -622,3 +622,13 @@ No resources found in default namespace.
 The application is now stopped, but you **haven't deleted** the deployment.
 
 ---
+
+##### Autoscaling (Optional)
+
+Kubernetes also allows autoscaling based on CPU and memory usage:
+
+```bash
+kubectl autoscale deployment first-app --min=1 --max=5 --cpu-percent=80
+```
+
+This will automatically scale the deployment **between 1 and 5 replicas**, depending on CPU load.
