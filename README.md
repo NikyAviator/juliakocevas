@@ -543,3 +543,24 @@ minikube service first-app
 🎉  Opening service default/first-app in default browser...
 ❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
 ```
+
+---
+
+#### Scaling:
+
+A **"replica"** is simply an **instance of a Pod / Container**. 3 Replicas means that the same Pod / Container is running three times.
+
+```bash
+kubectl scale deployment/first-app --replicas=3
+```
+
+```bash
+kubectl get pods
+```
+
+```
+NAME                         READY   STATUS    RESTARTS      AGE
+first-app-74dd54458b-7fqh4   1/1     Running   0             10s
+first-app-74dd54458b-clwsz   1/1     Running   0             10s
+first-app-74dd54458b-mc27z   1/1     Running   8 (43m ago)   7d1h
+```
