@@ -38,6 +38,11 @@ A website for my sister that is an artist.
     - [LoadBalancer](#loadbalancer)
     - [ExternalName](#externalname)
   - [Imperative Approach](#imperative-approach)
+  - [Scaling](#scaling)
+    - [Scaling Up](#scaling-up)
+    - [Scaling Down](#scaling-down)
+    - [Scaling to Zero (Stopping the App)](#scaling-to-zero-stopping-the-app)
+    - [Autoscaling (Optional)](#autoscaling-optional)
 
 ## Frontend Setup
 
@@ -546,7 +551,9 @@ minikube service first-app
 
 ---
 
-#### Scaling:
+## Scaling:
+
+#### Scaling Up
 
 A **"replica"** is simply an **instance of a Pod / Container**. 3 Replicas means that the same Pod / Container is running three times.
 
@@ -558,9 +565,36 @@ kubectl scale deployment/first-app --replicas=3
 kubectl get pods
 ```
 
+Expected output:
+
 ```
 NAME                         READY   STATUS    RESTARTS      AGE
 first-app-74dd54458b-7fqh4   1/1     Running   0             10s
 first-app-74dd54458b-clwsz   1/1     Running   0             10s
 first-app-74dd54458b-mc27z   1/1     Running   8 (43m ago)   7d1h
 ```
+
+---
+
+#### Scaling Down
+
+To **scale down** a deployment (e.g., back to 1 replica):
+
+```bash
+kubectl scale deployment/first-app --replicas=1
+```
+
+Check the Pods again:
+
+```bash
+kubectl get pods
+```
+
+Expected output:
+
+```
+NAME                         READY   STATUS    RESTARTS      AGE
+first-app-74dd54458b-mc27z   1/1     Running   8 (73m ago)   7d1h
+```
+
+---
