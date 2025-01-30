@@ -43,6 +43,7 @@ A website for my sister that is an artist.
     - [Scaling Down](#scaling-down)
     - [Scaling to Zero (Stopping the App)](#scaling-to-zero-stopping-the-app)
     - [Autoscaling (Optional)](#autoscaling-optional)
+  - [Updating deployments](#updating-deployments)
 
 ## Frontend Setup
 
