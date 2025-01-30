@@ -632,3 +632,109 @@ kubectl autoscale deployment first-app --min=1 --max=5 --cpu-percent=80
 ```
 
 This will automatically scale the deployment **between 1 and 5 replicas**, depending on CPU load.
+
+---
+
+#### Updating deployments
+
+Let's say we now made changes to our code, we want to use the new code and build an image with Docker.
+
+Our current "App" is this right now (saved under my Dockerhub account eclair2093/kub-first-app with the **default tag** of: **latest** ):
+
+```javascript
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Hello from this NodeJS app!</h1>
+    <p>Try sending a request to /error and see what happens</p>
+  `);
+});
+
+app.get('/error', (req, res) => {
+  process.exit(1);
+});
+
+app.listen(8080);
+```
+
+But now we want to change our code a bit and keep track of our different versions:
+
+```javascript
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send(`
+    <h1> Hello my little gopher!</h1>
+    <p>Try sending a request to /error and see what happens. A little error might occur ;)</p>
+  `);
+});
+
+app.get('/error', (req, res) => {
+  process.exit(1);
+});
+
+app.listen(8080);
+```
+
+The Dockerfile for those who wonder:
+
+```javascript
+FROM node:14-alpine
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
+
+CMD [ "node", "app.js" ]
+```
+
+Now let us build a new image based on this new code and then push it to our repo!
+
+Note! **:2** signifies the tag name/versioning etc!
+
+Build new image:
+
+```bash
+docker build -t eclair2093/kub-first-app:2 .
+```
+
+Push new image:
+
+```bash
+docker push eclair2093/kub-first-app:2
+```
+
+Now specify the new image for deployment (it will detect the tag and redownload the new code and restart the containers based upon this new image):
+
+```bash
+kubectl set image deployment/first-app kub-first-app=eclair2093/kub-first-app:2
+```
+
+Expected output:
+
+```bash
+deployment.apps/first-app image updated
+```
+
+Check the status of your deployments:
+
+```
+kubectl rollout status deployment/first-app
+```
+
+Expected output:
+
+```
+deployment "first-app" successfully rolled out
+```
