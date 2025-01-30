@@ -706,19 +706,19 @@ Note! **:2** signifies the tag name/versioning etc!
 Build new image:
 
 ```bash
-docker build -t eclair2093/kub-first-app:2 .
+docker build -t eclair2093/kub-first-app:3 .
 ```
 
 Push new image:
 
 ```bash
-docker push eclair2093/kub-first-app:2
+docker push eclair2093/kub-first-app:3
 ```
 
 Now specify the new image for deployment (it will detect the tag and redownload the new code and restart the containers based upon this new image):
 
 ```bash
-kubectl set image deployment/first-app kub-first-app=eclair2093/kub-first-app:2
+kubectl set image deployment/first-app kub-first-app=eclair2093/kub-first-app:3
 ```
 
 Expected output:
