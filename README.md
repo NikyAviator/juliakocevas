@@ -44,6 +44,7 @@ A website for my sister that is an artist.
     - [Scaling to Zero (Stopping the App)](#scaling-to-zero-stopping-the-app)
     - [Autoscaling (Optional)](#autoscaling-optional)
   - [Updating deployments](#updating-deployments)
+  - [Rollback a deployment](#rollback-a-deployment)
 
 ## Frontend Setup
 
@@ -739,3 +740,29 @@ Expected output:
 ```
 deployment "first-app" successfully rolled out
 ```
+
+---
+
+#### Rollback a deployment
+
+What if a new update **breaks** your app? Kubernetes lets you **rollback** to a previous version.
+
+Rollback to the last working version:
+
+```bash
+kubectl rollout undo deployment/first-app
+```
+
+Check previous versions:
+
+```bash
+kubectl rollout history deployment/first-app
+```
+
+Rollback to a specific version:
+
+```bash
+kubectl rollout undo deployment/first-app --to-revision=2
+```
+
+---
