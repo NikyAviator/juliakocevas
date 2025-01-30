@@ -45,6 +45,7 @@ A website for my sister that is an artist.
     - [Autoscaling (Optional)](#autoscaling-optional)
   - [Updating deployments](#updating-deployments)
   - [Rollback a deployment](#rollback-a-deployment)
+  - [Kubernetes Logs & Debugging](#kubernetes-logs--debugging)
 
 ## Frontend Setup
 
@@ -763,6 +764,36 @@ Rollback to a specific version:
 
 ```bash
 kubectl rollout undo deployment/first-app --to-revision=2
+```
+
+---
+
+#### Kubernetes Logs & Debugging
+
+If something is wrong, we need logs, let us get them!
+
+View logs from a Pod:
+
+```bash
+kubectl logs POD_NAME
+```
+
+Stream logs (live updates):
+
+```bash
+kubectl logs -f POD_NAME
+```
+
+Describe a Pod (useful for debugging):
+
+```bash
+kubectl describe pod POD_NAME
+```
+
+Check why a Pod is crashing:
+
+```bash
+kubectl get events --sort-by=.metadata.creationTimestamp
 ```
 
 ---
