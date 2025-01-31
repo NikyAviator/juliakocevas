@@ -43,9 +43,14 @@ A website for my sister that is an artist.
     - [Scaling Down](#scaling-down)
     - [Scaling to Zero (Stopping the App)](#scaling-to-zero-stopping-the-app)
     - [Autoscaling (Optional)](#autoscaling-optional)
-  - [Updating deployments](#updating-deployments)
-  - [Rollback a deployment](#rollback-a-deployment)
+  - [Updating Deployments](#updating-deployments)
+    - [Building and Pushing a New Image](#building-and-pushing-a-new-image)
+    - [Rolling Out the New Image](#rolling-out-the-new-image)
+    - [Checking Deployment Status](#checking-deployment-status)
+  - [Rollback a Deployment](#rollback-a-deployment)
   - [Kubernetes Logs & Debugging](#kubernetes-logs--debugging)
+  - [Deleting Kubernetes Resources](#deleting-kubernetes-resources)
+  - [Declarative Approach](#declarative-approach)
 
 ## Frontend Setup
 
