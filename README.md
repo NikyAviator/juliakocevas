@@ -797,3 +797,27 @@ kubectl get events --sort-by=.metadata.creationTimestamp
 ```
 
 ---
+
+#### Deleting Kubernetes Resources
+
+Delete a deployment:
+
+```bash
+kubectl delete deployment first-app
+```
+
+Delete a service:
+
+```bash
+kubectl delete service first-app
+```
+
+Delete all running pods:
+
+```bash
+kubectl delete pods --all
+```
+
+---
+
+## Declarative Approach
