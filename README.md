@@ -826,3 +826,56 @@ kubectl delete pods --all
 ---
 
 ## Declarative Approach
+
+We are still working on the small app.js app with just some text, just to familiarize us with the declarative Kubernetes approach!
+
+we create two files in this case in my kub-action-01-starting-setup folder:
+
+**deployment.yaml**:
+
+```javascript
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: second-app
+  selector:
+    matchLabels:
+      app: second-app
+
+  template:
+    metadata:
+      labels:
+        app: second-app
+    spec:
+      containers:
+        - name: second-node
+          image: eclair2093/kub-first-app:3
+```
+
+**service.yaml**:
+
+```javascript
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: second-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+```
+
+To start everything up from a "cold" start:
+
+```bash
+
+```
