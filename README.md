@@ -874,8 +874,30 @@ spec:
   type: LoadBalancer
 ```
 
-To start everything up from a "cold" start:
+1. To start everything up from a "cold" start:
 
 ```bash
-
+minikube start
 ```
+
+2. Verify Running Pods, Deployments and Services:
+
+```bash
+kubectl get all
+```
+
+Expected output (nothing running from your end):
+
+```javascript
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   28d
+```
+
+If you see any existing deployment for second-app-deployment, delete it first.
+But if you see the above thing that means:
+
+- **service/kubernetes**: This is the default Kubernetes service that is always present in a Kubernetes cluster. It allows internal communication between cluster components.
+- **ClusterIP**: 10.96.0.1: This is the internal IP assigned to the Kubernetes API service.
+- **EXTERNAL-IP**: <none>: Since this is an internal service, it doesn’t have an external IP.
+- **PORT(S)**: 443/TCP: It listens on port 443 (HTTPS) to handle API requests.
+- **AGE**: 28d: Your Minikube cluster has been running for 28 days.
