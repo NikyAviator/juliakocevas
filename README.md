@@ -843,9 +843,6 @@ spec:
   selector:
     matchLabels:
       app: second-app
-  selector:
-    matchLabels:
-      app: second-app
 
   template:
     metadata:
