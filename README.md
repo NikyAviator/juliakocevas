@@ -902,3 +902,26 @@ But if you see the above thing that means:
 ---
 
 3. Applying our files (\*.yaml)
+
+You can apply **both** deployment.yaml and service.yaml in one go using the following command:
+
+```bash
+kubectl apply -f deployment.yaml -f service.yaml
+```
+
+Alternatively, if both files are in the same directory, you can apply all YAML files in that directory with:
+
+```bash
+kubectl apply -f .
+```
+
+**What Happens?**
+
+- Kubernetes will create/update the deployment and the service at the same time.
+- If you have more YAML files in the directory (e.g., ConfigMaps, Secrets), they will also be applied.
+
+After applying, you can check if everything is running properly with:
+
+```bash
+kubectl get all
+```
