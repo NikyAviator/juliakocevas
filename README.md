@@ -23,26 +23,22 @@ A website for my sister that is an artist.
   - [Key Kubernetes Concepts](#key-kubernetes-concepts)
     - [Cluster](#cluster)
     - [Nodes](#nodes)
-    - [Master Node](#master-node)
-    - [Worker Node](#worker-node)
     - [Pods](#pods)
     - [Containers](#containers)
     - [Services](#services)
   - [Installing Kubernetes Locally](#installing-kubernetes-locally)
   - [Minikube Commands](#minikube-commands)
   - [Kubectl Commands](#kubectl-commands)
-  - [Exposing a Deployment with `kubectl expose`](#exposing-a-deployment-with-kubectl-expose)
+  - [Exposing a Deployment](#exposing-a-deployment)
   - [Kubernetes Service Types](#kubernetes-service-types)
     - [ClusterIP](#clusterip)
     - [NodePort](#nodeport)
     - [LoadBalancer](#loadbalancer)
-    - [ExternalName](#externalname)
-  - [Imperative Approach](#imperative-approach)
   - [Scaling](#scaling)
     - [Scaling Up](#scaling-up)
     - [Scaling Down](#scaling-down)
     - [Scaling to Zero (Stopping the App)](#scaling-to-zero-stopping-the-app)
-    - [Autoscaling (Optional)](#autoscaling-optional)
+    - [Autoscaling](#autoscaling)
   - [Updating Deployments](#updating-deployments)
     - [Building and Pushing a New Image](#building-and-pushing-a-new-image)
     - [Rolling Out the New Image](#rolling-out-the-new-image)
@@ -51,6 +47,7 @@ A website for my sister that is an artist.
   - [Kubernetes Logs & Debugging](#kubernetes-logs--debugging)
   - [Deleting Kubernetes Resources](#deleting-kubernetes-resources)
   - [Declarative Approach](#declarative-approach)
+  - [Multiple vs Single Config Files](#multiple-vs-single-config-files)
 
 ## Frontend Setup
 
@@ -972,3 +969,15 @@ For more info (GUI):
 ```bash
 minikube dashboard
 ```
+
+---
+
+To **delete** the created resources we can:
+
+```bash
+kubectl delete -f=deployment.yaml -f=service.yaml
+```
+
+---
+
+### Multiple vs Single Config Files
