@@ -847,10 +847,10 @@ spec:
   template:
     metadata:
       labels:
-        app: second-app
+        app: second-app # This is the label of the pod
     spec:
       containers:
-        - name: second-node
+        - name: second-node # This is the name of the container
           image: eclair2093/kub-first-app:3
 ```
 
@@ -863,7 +863,7 @@ metadata:
   name: backend
 spec:
   selector:
-    app: second-app
+    app: second-app # This is the label of the pod
   ports:
     - protocol: TCP
       port: 80
@@ -898,3 +898,7 @@ But if you see the above thing that means:
 - **EXTERNAL-IP**: <none>: Since this is an internal service, it doesn’t have an external IP.
 - **PORT(S)**: 443/TCP: It listens on port 443 (HTTPS) to handle API requests.
 - **AGE**: 28d: Your Minikube cluster has been running for 28 days.
+
+---
+
+3. Applying our files (\*.yaml)
