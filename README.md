@@ -966,3 +966,9 @@ Expected Output:
 🎉  Opening service default/backend in default browser...
 ❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
 ```
+
+For more info (GUI):
+
+```bash
+minikube dashboard
+```
