@@ -925,3 +925,44 @@ After applying, you can check if everything is running properly with:
 ```bash
 kubectl get all
 ```
+
+The output:
+
+```bash
+NAME                                         READY   STATUS    RESTARTS   AGE
+pod/second-app-deployment-66f8cc77c5-t4v6c   1/1     Running   0          3m54s
+
+NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/backend      LoadBalancer   10.101.170.127   <pending>     80:32666/TCP   3m54s
+service/kubernetes   ClusterIP      10.96.0.1        <none>        443/TCP        28d
+
+NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/second-app-deployment   1/1     1            1           3m54s
+
+NAME                                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/second-app-deployment-66f8cc77c5   1         1         1       3m54s
+```
+
+To now expose the Service to an IP address we write:
+
+```bash
+minikube service backend
+```
+
+Expected Output:
+
+```
+|-----------|---------|-------------|---------------------------|
+| NAMESPACE |  NAME   | TARGET PORT |            URL            |
+|-----------|---------|-------------|---------------------------|
+| default   | backend |          80 | http://192.168.49.2:32666 |
+|-----------|---------|-------------|---------------------------|
+🏃  Starting tunnel for service backend.
+|-----------|---------|-------------|------------------------|
+| NAMESPACE |  NAME   | TARGET PORT |          URL           |
+|-----------|---------|-------------|------------------------|
+| default   | backend |             | http://127.0.0.1:33801 |
+|-----------|---------|-------------|------------------------|
+🎉  Opening service default/backend in default browser...
+❗  Because you are using a Docker driver on linux, the terminal needs to be open to run it.
+```
