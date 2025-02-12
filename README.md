@@ -978,6 +978,26 @@ To **delete** the created resources we can:
 kubectl delete -f=deployment.yaml -f=service.yaml
 ```
 
+OR
+
+```bash
+kubectl delete -f deployment.yaml,service.yaml
+```
+
+More Ways to Delete Resources:
+
+If you want to delete **all resources in the current directory** (e.g., all .yaml files):
+
+```bash
+kubectl delete -f .
+```
+
+Or, if you want to delete **all deployments, services, and pods** in the namespace:
+
+```bash
+kubectl delete deployments,services,pods --all
+```
+
 ---
 
 ### Multiple vs Single Config Files
