@@ -1001,3 +1001,44 @@ kubectl delete deployments,services,pods --all
 ---
 
 ### Multiple vs Single Config Files
+
+We can merge multiple files into ONE file.
+
+Important note:
+
+The files need to be separated with three "-" dashes.
+Also, we put the Service first.
+
+```javascript
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: second-app # This is the label of the pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: second-app
+
+  template:
+    metadata:
+      labels:
+        app: second-app # This is the label of the pod
+    spec:
+      containers:
+        - name: second-node # This is the name of the container
+          image: eclair2093/kub-first-app:3
+```
