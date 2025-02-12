@@ -830,7 +830,7 @@ we create two files in this case in my kub-action-01-starting-setup folder:
 
 **deployment.yaml**:
 
-```javascript
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -853,7 +853,7 @@ spec:
 
 **service.yaml**:
 
-```javascript
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -1009,7 +1009,7 @@ Important note:
 The files need to be separated with three "-" dashes.
 Also, we put the Service first.
 
-```javascript
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
