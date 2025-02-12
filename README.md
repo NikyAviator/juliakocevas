@@ -1042,3 +1042,25 @@ spec:
         - name: second-node # This is the name of the container
           image: eclair2093/kub-first-app:3
 ```
+
+### Why Should the Service Be on Top?
+
+While Kubernetes does not enforce a strict order when defining multiple resources in a single YAML file, placing the Service before the Deployment is a best practice. Here's why:
+
+1. Avoids Initial Connection Issues:
+
+- When Kubernetes creates resources in a YAML file, it processes them in order.
+- If the Deployment starts first, it will immediately start creating Pods.
+- Since the Service is not yet created, any processes inside the container that try to connect to the Service may fail initially.
+
+2. Ensures a Stable Networking Endpoint:
+
+- By defining the Service first, Kubernetes ensures that the DNS record for the Service is created before the Pods start running.
+  . This guarantees that the Pods can resolve and communicate with the Service as soon as they start.
+
+3. Dependency Handling:
+
+- While the Deployment depends on the Service (for networking), the Service does not depend on the Deployment.
+- This means it is safer to create the Service first and let Kubernetes set up the networking before the Pods start.
+
+---
