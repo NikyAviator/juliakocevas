@@ -1064,3 +1064,5 @@ While Kubernetes does not enforce a strict order when defining multiple resource
 - This means it is safer to create the Service first and let Kubernetes set up the networking before the Pods start.
 
 ---
+
+### Managing Data & Volumes with Kubernetes
