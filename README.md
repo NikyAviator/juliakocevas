@@ -1066,3 +1066,51 @@ While Kubernetes does not enforce a strict order when defining multiple resource
 ---
 
 ### Managing Data & Volumes with Kubernetes
+
+We are still diving deeper into K8s theory. In this part we will discuss Data & Volumes in Kubernetes.
+
+The code we will use:
+
+```javascript
+const path = require('path');
+const fs = require('fs');
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+const filePath = path.join(__dirname, 'story', 'text.txt');
+
+app.use(bodyParser.json());
+
+app.get('/story', (req, res) => {
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      return res.status(500).json({ message: 'Failed to open file.' });
+    }
+    res.status(200).json({ story: data.toString() });
+  });
+});
+
+app.post('/story', (req, res) => {
+  const newText = req.body.text;
+  if (newText.trim().length === 0) {
+    return res.status(422).json({ message: 'Text must not be empty!' });
+  }
+  fs.appendFile(filePath, newText + '\n', (err) => {
+    if (err) {
+      return res.status(500).json({ message: 'Storing the text failed.' });
+    }
+    res.status(201).json({ message: 'Text was stored!' });
+  });
+});
+
+app.get('error', (req, res) => {
+  process.exit(1);
+});
+
+app.listen(3000);
+```
+
+A simple code that saves text to a "text.txt" file and also retrieves the saved data on the same endpoint.
