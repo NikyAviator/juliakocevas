@@ -48,6 +48,7 @@ A website for my sister that is an artist.
   - [Deleting Kubernetes Resources](#deleting-kubernetes-resources)
   - [Declarative Approach](#declarative-approach)
   - [Multiple vs Single Config Files](#multiple-vs-single-config-files)
+  - [Managing Data & Volumes with Kubernetes](#managing-data--volumes-with-kubernetes)
 
 ## Frontend Setup
 
