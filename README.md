@@ -49,6 +49,7 @@ A website for my sister that is an artist.
   - [Declarative Approach](#declarative-approach)
   - [Multiple vs Single Config Files](#multiple-vs-single-config-files)
   - [Managing Data & Volumes with Kubernetes](#managing-data--volumes-with-kubernetes)
+    - [emptyDir](#emptydir)
 
 ## Frontend Setup
 
@@ -1114,4 +1115,49 @@ app.get('/error', (req, res) => {
 app.listen(3000);
 ```
 
+The default .yaml files for this project (:1 version added the /error route).
+
+deployment.yaml:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: story-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: story
+  template:
+    metadata:
+      labels:
+        app: story
+    spec:
+      containers:
+        - name: story
+          image: eclair2093/kub-data-demo:1
+```
+
+service.yaml:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: story-service
+spec:
+  selector:
+    app: story
+  type: LoadBalancer
+  ports:
+    - protocol: 'TCP'
+      port: 80
+      targetPort: 3000
+```
+
 A simple code that saves text to a "text.txt" file and also retrieves the saved data on the same endpoint.
+
+---
+
+#### emptyDir
