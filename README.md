@@ -1161,3 +1161,17 @@ A simple code that saves text to a "text.txt" file and also retrieves the saved 
 ---
 
 #### emptyDir
+
+From the official docs:
+(https://kubernetes.io/docs/concepts/storage/volumes/)
+
+For a Pod that defines an **emptyDir** volume, the volume is created when the Pod is assigned to a node. As the name says, the emptyDir volume is initially empty. All containers in the Pod can read and write the same files in the emptyDir volume, though that volume can be mounted at the same or different paths in each container. When a Pod is removed from a node for any reason, the data in the emptyDir is **deleted permanently**.
+
+Note:
+A container crashing does **not** remove a Pod from a node. The data in an emptyDir volume is safe across container crashes.
+
+Some uses for an emptyDir are:
+
+- scratch space, such as for a disk-based merge sort
+- checkpointing a long computation for recovery from crashes
+- holding files that a content-manager container fetches while a webserver container serves the data
