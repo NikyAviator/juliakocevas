@@ -5,8 +5,9 @@ metadata:
 spec:
   selector:
     app: frontend
-  type: LoadBalancer
+  type: NodePort
   ports:
     - protocol: TCP
-      port: 8080
+      port: 80 # Frontend apps typically serve on port 80
       targetPort: 8080
+      nodePort: 30002 # Expose frontend on port 30002
