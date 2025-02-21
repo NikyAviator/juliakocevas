@@ -1086,3 +1086,86 @@ docker build -t eclair2093/juliakocevas-backend-local -f DockerfileBackend .
 ---
 
 The project is divided into two folders, `backend` & `frontend`.
+
+Let us take a look at the local Kubernetes Manifests:
+
+`/backend/kubernetes`:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: eclair2093/juliakocevas-backend-local:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+```
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30001 # Expose the backend service on port 30001
+```
+
+`/frontend/kubernetes`:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: eclair2093/juliakocevas-frontend:latest
+          ports:
+            - containerPort: 8080
+```
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: frontend
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80 # Frontend apps typically serve on port 80
+      targetPort: 8080
+      nodePort: 30002 # Expose frontend on port 30002
+```

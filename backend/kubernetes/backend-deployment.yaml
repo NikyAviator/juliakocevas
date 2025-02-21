@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: eclair2093/juliakocevas-backend:latest
+          image: eclair2093/juliakocevas-backend-local:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 5000
