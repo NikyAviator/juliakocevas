@@ -1069,3 +1069,13 @@ While Kubernetes does not enforce a strict order when defining multiple resource
 ### Our K8s
 
 Let us now begin creating our own Kubernetes yaml files!
+
+To begin we will first run the project locally. When I developed the website I first created `serverlocal.js` to run the project locally, after I had it up and running locally, then I created `servergcp.js`.
+
+With this in mind, I created another dockerfile in the backend folder called: `DockerfileBackend`. Based on this I will create and push a new docker image for us to run the project locally.
+
+```bash
+docker build -t eclair2093/juliakocevas-backend-local -f DockerfileBackend .
+```
+
+`-f` specifies a specific file for the image creation.
