@@ -1169,3 +1169,9 @@ spec:
       targetPort: 8080
       nodePort: 30002 # Expose frontend on port 30002
 ```
+
+To now run it locally (via minikube):
+
+```bash
+minikube start
+```
