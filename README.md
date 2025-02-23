@@ -1217,11 +1217,11 @@ spec: {}
 status: {}
 ```
 
-Now lets us apply our K8s yaml files.
+Now lets us apply our K8s yaml files. Cd into **deployment** folder and:
 
 ```bash
-kubectl apply -f backend/kubernetes/backend-service.yaml
-kubectl apply -f backend/kubernetes/backend-deployment.yaml
-kubectl apply -f frontend/kubernetes/frontend-service.yaml
-kubectl apply -f frontend/kubernetes/frontend-deployment.yaml
+kubectl apply -f backend-service.yaml
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f frontend-service.yaml
+kubectl apply -f frontend-deployment.yaml
 ```
