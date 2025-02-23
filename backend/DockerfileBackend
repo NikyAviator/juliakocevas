@@ -14,10 +14,10 @@ RUN npm install
 COPY . .
 
 # Expose the backend port
-EXPOSE 5000
+EXPOSE 3001
 
 # Set the environment variables
-ENV PORT=5000
+ENV PORT=3001
 
 # Use the local server for local development
 CMD ["node", "serverlocal.js"]
