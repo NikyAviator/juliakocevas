@@ -1175,3 +1175,53 @@ To now run it locally (via minikube):
 ```bash
 minikube start
 ```
+
+Let us start with a clean Cluster.
+
+Run the following command to **delete everything** inside your current namespace (default):
+
+```bash
+kubectl delete all --all
+```
+
+This deletes all deployments, services, pods, replica sets, and more.
+
+Verify cleanup:
+
+```bash
+kubectl get all
+```
+
+Expected output:
+
+```pgsql
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   43h
+```
+
+Let us first create a separate **namespace**. To get the yaml file for the new namespace, type:
+
+```bash
+kubectl create ns juliakocevas --dry-run=client -o yaml
+```
+
+Expected output:
+
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: juliakocevas
+spec: {}
+status: {}
+```
+
+Now lets us apply our K8s yaml files.
+
+```bash
+kubectl apply -f backend/kubernetes/backend-service.yaml
+kubectl apply -f backend/kubernetes/backend-deployment.yaml
+kubectl apply -f frontend/kubernetes/frontend-service.yaml
+kubectl apply -f frontend/kubernetes/frontend-deployment.yaml
+```
