@@ -1220,8 +1220,21 @@ status: {}
 Now lets us apply our K8s yaml files. Cd into **deployment** folder and:
 
 ```bash
+kubectl apply -f namespace.yaml
 kubectl apply -f backend-service.yaml
 kubectl apply -f backend-deployment.yaml
 kubectl apply -f frontend-service.yaml
 kubectl apply -f frontend-deployment.yaml
+```
+
+To check our newly created namespace and all it's objects:
+
+```bash
+kubectl get all -n juliakocevas
+```
+
+If we made any changes to the yaml files and need to restart the pods:
+
+```bash
+kubectl rollout restart -n juliakocevas deployment/backend-deployment
 ```
